@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central de Infografia Flourish | Portal VIVA</title>
+
+  <!-- Google Fonts: Roboto e Roboto Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Roboto', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+            mono: ['Roboto Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
+          },
+          colors: {
+            viva: {
+              primary: '#005F6B',
+              dark: '#00464F',
+              soft: '#E6F2F3',
+              gray: '#898A8E',
+              light: '#D0D2D6',
+              alert: '#D9383A',
+              ink: '#1E293B',
+              lime: '#E6FF2A'
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Ajustes complementares de tipografia, rolagem e animações */
+    body {
+      font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1E293B;
+      background-color: #F4F6F8;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Destaque para caminhos de menu em inglês do Flourish nos tutoriais */
+    .menu-tag {
+      display: inline-block;
+      padding: 0.08rem 0.45rem;
+      border-radius: 0.375rem;
+      background-color: #E6F2F3;
+      color: #00464F;
+      font-family: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.8em;
+      font-weight: 700;
+      border: 1px solid #C6E2E5;
+      vertical-align: baseline;
+    }
+
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-slide {
+      animation: fadeSlideUp 200ms ease-out forwards;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-viva-soft selection:text-viva-dark">
+
+  <!-- ======================================================================
+       1. CABEÇALHO EDITORIAL LIMPO
+       ====================================================================== -->
+  <header class="bg-gradient-to-r from-viva-dark to-viva-primary text-white border-b-4 border-viva-dark shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+      <div>
+        <div class="inline-flex items-center gap-2 mb-1.5">
+          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider uppercase bg-white/15 text-viva-soft border border-white/20">
+            Redação
+          </span>
+          <span class="text-xs font-medium text-viva-soft/90">Fluxo oficial de gráficos interativos</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-black tracking-tight leading-tight">
+          Portal VIVA | Central de Infografia Flourish
+        </h1>
+        <p class="text-sm text-viva-soft/90 mt-1">
+          Acesso rápido à conta da redação, templates oficiais, manual visual, assistentes de IA e checklist de publicação.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       2. TOPO: CONTA COMPARTILHADA + BANNER REGRA DE OURO
+       ====================================================================== -->
+  <section class="max-w-6xl w-full mx-auto px-4 sm:px-6 pt-5 pb-2 space-y-3" aria-label="Acesso ao Flourish e Regra de Ouro">
+    <!-- Card de Acesso à Conta Compartilhada -->
+    <div class="bg-white border border-viva-light border-l-4 border-l-viva-primary rounded-xl p-4 sm:p-5 shadow-sm">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 pb-4 border-b border-slate-100">
+        <div class="flex items-start gap-3 min-w-0">
+          <div class="w-10 h-10 rounded-lg bg-viva-soft text-viva-primary flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+          </div>
+          <div class="min-w-0">
+            <h2 class="text-base font-bold text-viva-ink">Acesso à Conta Compartilhada do Flourish</h2>
+            <p class="text-xs font-mono text-viva-gray truncate mt-0.5" title="https://app.flourish.studio/login?_sp=6bd0cbf1-599b-4708-99c0-670ebd6a1e00.1795408165408">
+              https://app.flourish.studio/login?_sp=6bd0cbf1-599b-4708...
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+          <a
+            id="btnOpenFlourishLogin"
+            href="https://app.flourish.studio/login?_sp=6bd0cbf1-599b-4708-99c0-670ebd6a1e00.1795408165408"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-viva-primary hover:bg-viva-dark text-white text-sm font-bold transition shadow-sm"
+          >
+            <span>Abrir Login do Flourish &#8599;</span>
+          </a>
+          <button
+            id="btnCopyFlourishLogin"
+            type="button"
+            class="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-lg bg-white hover:bg-viva-soft text-viva-primary border border-viva-light hover:border-viva-primary text-sm font-bold transition"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copiar link de login</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Credenciais: E-mail e Senha -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-4">
+        <!-- E-mail -->
+        <div class="flex items-center justify-between gap-3 bg-slate-50 border border-viva-light rounded-lg px-3.5 py-2.5">
+          <div class="min-w-0">
+            <span class="block text-[11px] font-bold uppercase tracking-wider text-viva-gray">E-mail</span>
+            <span id="emailDisplay" class="block font-mono text-sm font-semibold text-viva-ink truncate">adm.mkt@viva.com.br</span>
+          </div>
+          <button
+            id="btnCopyEmail"
+            type="button"
+            class="shrink-0 px-3 py-1.5 rounded-lg bg-white hover:bg-viva-soft text-viva-primary border border-viva-light hover:border-viva-primary text-xs font-bold transition"
+          >
+            Copiar
+          </button>
+        </div>
+
+        <!-- Senha -->
+        <div class="flex items-center justify-between gap-3 bg-slate-50 border border-viva-light rounded-lg px-3.5 py-2.5">
+          <div class="min-w-0">
+            <span class="block text-[11px] font-bold uppercase tracking-wider text-viva-gray">Senha</span>
+            <span id="passwordDisplay" class="block font-mono text-sm font-semibold text-viva-ink tracking-wider truncate">••••••••••••••••</span>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button
+              id="btnTogglePassword"
+              type="button"
+              class="p-2 rounded-lg bg-white hover:bg-viva-soft text-viva-ink hover:text-viva-primary border border-viva-light hover:border-viva-primary transition"
+              aria-label="Mostrar senha"
+              title="Mostrar ou ocultar senha"
+            >
+              <!-- Ícone olho aberto (padrão) -->
+              <svg id="iconEyeOpen" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <!-- Ícone olho fechado -->
+              <svg id="iconEyeClosed" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+            </button>
+            <button
+              id="btnCopyPassword"
+              type="button"
+              class="px-3 py-1.5 rounded-lg bg-white hover:bg-viva-soft text-viva-primary border border-viva-light hover:border-viva-primary text-xs font-bold transition"
+            >
+              Copiar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner de Alerta — Regra de Ouro -->
+    <div role="alert" class="flex items-start gap-3 bg-red-50 border border-red-200 border-l-4 border-l-viva-alert text-red-900 rounded-xl px-4 py-3.5 shadow-sm">
+      <svg class="w-5 h-5 text-viva-alert shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+        <line x1="12" y1="9" x2="12" y2="13"></line>
+        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+      </svg>
+      <p class="text-sm leading-relaxed">
+        <strong class="font-black">REGRA DE OURO: NUNCA EDITE O MODELO ORIGINAL!</strong> Ao abrir qualquer template, clique em
+        <code class="px-1.5 py-0.5 rounded bg-red-100 font-mono text-xs font-semibold">Modelos</code> abaixo do título ou nos três pontinhos e selecione
+        <code class="px-1.5 py-0.5 rounded bg-red-100 font-mono text-xs font-semibold">Duplicate this visualization</code> antes de colar seus dados.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       3. NAVEGAÇÃO EM 4 ABAS (STICKY) — "Templates" ATIVA POR PADRÃO
+       ====================================================================== -->
+  <nav class="sticky top-0 z-30 bg-[#F4F6F8]/95 backdrop-blur border-b border-viva-light mt-3" aria-label="Navegação principal">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-2.5" role="tablist">
+        <button
+          type="button"
+          role="tab"
+          id="tab-templates"
+          data-tab="templates"
+          aria-controls="panel-templates"
+          aria-selected="true"
+          class="tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold whitespace-nowrap transition border"
+        >
+          <span>Templates</span>
+          <span class="tab-pill px-2 py-0.5 rounded-full text-xs font-mono">9</span>
+        </button>
+
+        <button
+          type="button"
+          role="tab"
+          id="tab-manual"
+          data-tab="manual"
+          aria-controls="panel-manual"
+          aria-selected="false"
+          class="tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold whitespace-nowrap transition border"
+        >
+          <span>Manual, Cores e Menus</span>
+        </button>
+
+        <button
+          type="button"
+          role="tab"
+          id="tab-skills"
+          data-tab="skills"
+          aria-controls="panel-skills"
+          aria-selected="false"
+          class="tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold whitespace-nowrap transition border"
+        >
+          <span>Assistentes de IA</span>
+          <span class="tab-pill px-2 py-0.5 rounded-full text-xs font-mono">4</span>
+        </button>
+
+        <button
+          type="button"
+          role="tab"
+          id="tab-checklist"
+          data-tab="checklist"
+          aria-controls="panel-checklist"
+          aria-selected="false"
+          class="tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold whitespace-nowrap transition border"
+        >
+          <span>Checklist de Publicação</span>
+          <span id="tabChecklistBadge" class="tab-pill px-2 py-0.5 rounded-full text-xs font-mono">0/7</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================================================================
+       CONTEÚDO PRINCIPAL DAS 4 ABAS
+       ====================================================================== -->
+  <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 py-7 flex-1">
+
+    <!-- ====================================================================
+         ABA 1 — TEMPLATES OFICIAIS (ATIVA POR PADRÃO)
+         ==================================================================== -->
+    <section id="panel-templates" role="tabpanel" aria-labelledby="tab-templates" class="tab-panel animate-fade-slide">
+      <h2 class="text-xl sm:text-2xl font-black text-viva-ink tracking-tight mb-5">
+        Templates Oficiais
+      </h2>
+
+      <!-- Grid responsivo: 1 coluna mobile, 2 tablet, 3 desktop -->
+      <div id="templatesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+
+    <!-- ====================================================================
+         ABA 2 — MANUAL, CORES E MENUS
+         ==================================================================== -->
+    <section id="panel-manual" role="tabpanel" aria-labelledby="tab-manual" class="tab-panel hidden animate-fade-slide space-y-7">
+      <!-- Card de Acesso ao Manual Oficial no Google Drive -->
+      <div class="bg-white border border-viva-light border-l-4 border-l-viva-primary rounded-xl p-5 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-start gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-viva-soft text-viva-primary flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-lg font-black text-viva-ink">Manual Oficial do Portal VIVA</h2>
+            <p class="text-sm text-slate-600 mt-0.5">
+              Consulte o documento completo de identidade visual, boas práticas editoriais e padronização de gráficos no Google Drive.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+          <a
+            href="https://drive.google.com/file/d/1vRqdVPEIOB5fGanINIWoPizwllgw_06c/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-viva-primary hover:bg-viva-dark text-white text-sm font-bold transition shadow-sm"
+          >
+            <span>Abrir Manual &#8599;</span>
+          </a>
+          <button
+            id="btnCopyManualLink"
+            type="button"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-viva-soft text-viva-primary border border-viva-light hover:border-viva-primary text-sm font-bold transition"
+          >
+            Copiar link
+          </button>
+        </div>
+      </div>
+
+      <!-- Paleta Oficial do Portal VIVA (10 cores uniformes + botão grande) -->
+      <div class="bg-white border border-viva-light rounded-xl p-5 sm:p-6 shadow-sm">
+        <div class="mb-5">
+          <h3 class="text-lg font-black text-viva-ink">Paleta Oficial do Portal VIVA</h3>
+          <p class="text-sm text-slate-600 mt-0.5">
+            Clique no botão de qualquer cor para copiar o código HEX diretamente para o Flourish.
+          </p>
+        </div>
+        <div id="paletteGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"></div>
+      </div>
+
+      <!-- Custom Overrides -->
+      <div class="bg-white border border-viva-light rounded-xl p-5 sm:p-6 shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+          <div>
+            <h3 class="text-lg font-black text-viva-ink">Custom Overrides</h3>
+            <p class="text-sm text-slate-600 mt-0.5">
+              Para fixar a cor de uma coluna ou categoria específica, cole no painel lateral em
+              <code class="px-1.5 py-0.5 rounded bg-viva-soft text-viva-dark font-mono text-xs font-semibold">Preview &gt; Colors &gt; Custom overrides</code>.
+            </p>
+          </div>
+          <button
+            id="btnCopyOverridesFormat"
+            type="button"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-viva-primary hover:bg-viva-dark text-white text-sm font-bold transition shrink-0"
+          >
+            Copiar formato
+          </button>
+        </div>
+
+        <div class="bg-slate-900 text-slate-100 rounded-xl overflow-hidden border border-slate-800">
+          <div class="px-4 py-2 bg-slate-800/80 text-xs font-mono text-slate-300 flex items-center justify-between">
+            <span>Preview &gt; Colors &gt; Custom overrides</span>
+            <span>Exemplo de sintaxe</span>
+          </div>
+          <pre id="customOverridesExample" class="px-4 py-4 font-mono text-sm sm:text-base text-viva-soft overflow-x-auto">Nome da coluna: #HEXdaCor</pre>
+        </div>
+      </div>
+
+      <!-- Dicionário de Menus do Flourish (EN -> PT) SEM coluna "Ação" -->
+      <div class="bg-white border border-viva-light rounded-xl p-5 sm:p-6 shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-4">
+          <div>
+            <h3 class="text-lg font-black text-viva-ink">Dicionário de Menus do Flourish (EN &rarr; PT)</h3>
+            <p class="text-sm text-slate-600 mt-0.5">
+              Pesquise o que você deseja ajustar para encontrar o caminho exato na interface em inglês do Flourish.
+            </p>
+          </div>
+          <span id="dictCountMeta" class="text-xs font-semibold text-viva-gray"></span>
+        </div>
+
+        <!-- Campo de busca instantânea -->
+        <div class="relative mb-4">
+          <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-viva-gray pointer-events-none">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+          <input
+            id="dictSearchInput"
+            type="search"
+            placeholder='Buscar ajuste (ex.: "fonte", "mapa", "All", "celular", "embed", "legenda")...'
+            aria-label="Pesquisar no dicionário de menus do Flourish"
+            class="w-full pl-10 pr-10 py-2.5 rounded-lg bg-slate-50 border border-viva-light text-sm text-viva-ink placeholder:text-viva-gray focus:outline-none focus:bg-white focus:border-viva-primary focus:ring-2 focus:ring-viva-primary/20 transition"
+          />
+          <button
+            id="dictSearchClear"
+            type="button"
+            aria-label="Limpar busca"
+            class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full text-slate-500 hover:bg-slate-200 hover:text-viva-ink items-center justify-center text-lg leading-none"
+          >
+            &times;
+          </button>
+        </div>
+
+        <!-- Tabela responsiva de 3 colunas -->
+        <div class="overflow-x-auto border border-viva-light rounded-xl">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-viva-dark text-white text-xs uppercase tracking-wider">
+                <th class="py-3 px-4 font-bold w-1/4">O que você quer ajustar</th>
+                <th class="py-3 px-4 font-bold w-2/5">Caminho no Flourish (EN)</th>
+                <th class="py-3 px-4 font-bold">Dica / Padrão Portal VIVA</th>
+              </tr>
+            </thead>
+            <tbody id="dictTableBody" class="divide-y divide-slate-200 text-sm bg-white"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ABA 3 — ASSISTENTES DE IA (GRID 2x2 LIMPO)
+         ==================================================================== -->
+    <section id="panel-skills" role="tabpanel" aria-labelledby="tab-skills" class="tab-panel hidden animate-fade-slide">
+      <div class="mb-5">
+        <h2 class="text-xl sm:text-2xl font-black text-viva-ink tracking-tight">
+          Assistentes de IA
+        </h2>
+        <p class="text-sm text-slate-600 mt-1">
+          Ferramentas oficiais do Portal VIVA no Gemini para apoiar a escolha, criação e revisão de gráficos no Flourish.
+        </p>
+      </div>
+
+      <!-- Grid 2x2 no desktop, 1 coluna no mobile -->
+      <div id="skillsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+    </section>
+
+    <!-- ====================================================================
+         ABA 4 — NOVA CHECKLIST DE PUBLICAÇÃO (7 PERGUNTAS + PRINTS GITHUB)
+         ==================================================================== -->
+    <section id="panel-checklist" role="tabpanel" aria-labelledby="tab-checklist" class="tab-panel hidden animate-fade-slide space-y-5">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-black text-viva-ink tracking-tight">
+          Checklist de Publicação
+        </h2>
+        <p class="text-sm text-slate-600 mt-1">
+          Valide os 7 pontos abaixo antes de publicar no CMS. Clique em <strong>Como fazer</strong> para ver o passo a passo com prints ou gere o guia do que falta no final.
+        </p>
+      </div>
+
+      <!-- Painel de Progresso -->
+      <div class="bg-white border border-viva-light rounded-xl p-5 shadow-sm space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div class="flex items-center gap-2.5">
+            <span id="checklistProgressCounter" class="text-sm font-bold text-viva-primary">
+              0/7 concluídos
+            </span>
+            <span
+              id="checklistDoneBadge"
+              class="hidden items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-viva-ink text-viva-lime"
+            >
+              100% pronto &#10003;
+            </span>
+          </div>
+
+          <button
+            id="btnClearChecklist"
+            type="button"
+            class="px-3.5 py-1.5 rounded-lg bg-white hover:bg-red-50 text-viva-gray hover:text-viva-alert border border-viva-light hover:border-red-200 text-xs font-bold transition"
+          >
+            Limpar marcações
+          </button>
+        </div>
+
+        <!-- Barra de progresso -->
+        <div
+          id="checklistProgressWrapper"
+          class="w-full h-3 bg-slate-200 rounded-full overflow-hidden"
+          role="progressbar"
+          aria-label="Progresso da checklist de publicação"
+          aria-valuemin="0"
+          aria-valuemax="7"
+          aria-valuenow="0"
+        >
+          <div
+            id="checklistProgressBar"
+            class="h-full w-0 bg-viva-primary rounded-full transition-all duration-300 ease-out"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Lista única com as 7 perguntas -->
+      <ul id="checklistItemsList" class="space-y-3"></ul>
+
+      <!-- Botão principal abaixo da lista -->
+      <div class="pt-1">
+        <button
+          id="btnShowPendingGuide"
+          type="button"
+          class="w-full py-4 px-5 rounded-xl bg-viva-primary hover:bg-viva-dark active:scale-[0.995] text-white font-bold text-sm sm:text-base shadow-sm transition flex items-center justify-center gap-2.5"
+        >
+          <span id="btnShowPendingIcon" aria-hidden="true"></span>
+          <span id="btnShowPendingLabel">Ver tutorial do que falta fazer (7 pendentes)</span>
+        </button>
+      </div>
+
+      <!-- Painel dinâmico: Passo a passo do que falta fazer / Guia final CMS -->
+      <div
+        id="pendingGuideSection"
+        class="hidden scroll-mt-20 animate-fade-slide"
+        aria-live="polite"
+      >
+        <div class="bg-white border border-viva-light rounded-xl shadow-sm overflow-hidden">
+          <div
+            id="pendingGuideHeader"
+            class="px-5 py-4 bg-viva-soft/80 border-b border-viva-light flex flex-wrap items-center justify-between gap-3"
+          >
+            <div>
+              <h3 id="pendingGuideTitle" class="text-base sm:text-lg font-black text-viva-dark">
+                Passo a passo do que falta fazer
+              </h3>
+              <p id="pendingGuideSubtitle" class="text-xs sm:text-sm text-slate-600 mt-0.5">
+                Conclua os itens abaixo e clique em "Marcar como feito ✓" conforme finalizar.
+              </p>
+            </div>
+            <button
+              id="btnClosePendingGuide"
+              type="button"
+              class="px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-600 hover:text-viva-ink border border-viva-light text-xs font-bold transition shrink-0"
+            >
+              Fechar painel
+            </button>
+          </div>
+
+          <div id="pendingGuideBody" class="p-5 space-y-5"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       RODAPÉ
+       ====================================================================== -->
+  <footer class="bg-white border-t border-viva-light py-4 mt-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-viva-gray">
+      <span><strong class="text-viva-ink">Portal VIVA</strong> — Central de Infografia Flourish</span>
+      <span>Salve esta página nos favoritos do navegador para acesso rápido na redação.</span>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       MODAL LIGHTBOX GLOBAL — AMPLIAÇÃO DE PRINTS DA CHECKLIST
+       ====================================================================== -->
+  <div
+    id="zoomModal"
+    class="hidden fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-sm p-3 sm:p-6 flex items-center justify-center"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="zoomModalCaption"
+  >
+    <div class="bg-white border border-viva-light rounded-2xl shadow-2xl w-full max-w-5xl max-h-[92vh] flex flex-col overflow-hidden animate-fade-slide">
+      <!-- Topo do lightbox -->
+      <div class="px-4 sm:px-5 py-3.5 bg-viva-ink text-white flex items-center justify-between gap-3">
+        <div class="min-w-0 flex items-center gap-2.5">
+          <span class="px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-viva-primary text-viva-lime shrink-0">
+            Zoom
+          </span>
+          <h3 id="zoomModalCaption" class="text-sm sm:text-base font-medium truncate">
+            Print ampliado
+          </h3>
+        </div>
+        <button
+          id="btnCloseZoom"
+          type="button"
+          aria-label="Fechar ampliação (Esc)"
+          class="w-9 h-9 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 flex items-center justify-center transition shrink-0"
+        >
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Imagem ampliada -->
+      <div class="p-4 sm:p-6 bg-slate-900 overflow-auto flex-1 flex items-center justify-center">
+        <img
+          id="zoomModalImg"
+          src=""
+          alt="Print ampliado"
+          class="max-w-full max-h-[75vh] rounded-lg shadow-lg object-contain bg-white"
+        />
+      </div>
+
+      <!-- Rodapé do lightbox -->
+      <div class="px-4 sm:px-5 py-2.5 bg-white border-t border-viva-light flex flex-wrap items-center justify-between gap-2 text-xs text-viva-gray">
+        <span>Pressione <kbd class="px-1.5 py-0.5 rounded bg-slate-100 border border-slate-300 font-mono text-viva-ink">Esc</kbd> ou clique fora para fechar.</span>
+        <a
+          id="zoomModalRawLink"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-viva-primary hover:underline font-bold"
+        >
+          Abrir imagem original &#8599;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container de Toasts (canto inferior direito) -->
+  <div id="toastContainer" class="fixed right-4 bottom-4 z-50 flex flex-col gap-2 max-w-sm w-[calc(100%-2rem)] sm:w-auto pointer-events-none" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ======================================================================
+       JAVASCRIPT — DADOS E LÓGICA INTERATIVA UNIFICADA
+       ====================================================================== -->
+  <script>
+    /* ========================================================================
+       CONSTANTES DE CONFIGURAÇÃO E DADOS OFICIAIS DO PORTAL VIVA
+       ======================================================================== */
+    const PORTAL_DATA = {
+      loginUrl: 'https://app.flourish.studio/login?_sp=6bd0cbf1-599b-4708-99c0-670ebd6a1e00.1795408165408',
+      email: 'adm.mkt@viva.com.br',
+      password: 'portal-viva-2025',
+      manualUrl: 'https://drive.google.com/file/d/1vRqdVPEIOB5fGanINIWoPizwllgw_06c/view?usp=sharing',
+      customOverridesExample: 'Nome da coluna: #HEXdaCor',
+      geminiRevisorUrl: 'https://gemini.google.com/customize/skills/d/1WePE-JKRQDCriMGLI0XIGKy8-js_Fua8?usp=sharing',
+      githubRawBase: 'https://raw.githubusercontent.com/felipecavas/FlorishVIVA/main/'
+    };
+
+    const TEMPLATES = [
+      {
+        id: 'linhas',
+        name: 'Linhas',
+        url: 'https://app.flourish.studio/visualisation/30928327/edit',
+        whenToUse: 'Séries temporais, evolução histórica, variação ao longo de meses ou anos e tendências comparadas (1 a 4 linhas).'
+      },
+      {
+        id: 'barras-horizontais',
+        name: 'Barras horizontais',
+        url: 'https://app.flourish.studio/visualisation/30928423/edit',
+        whenToUse: 'Rankings, comparações simples entre categorias e listas com nomes longos (ideal para até 6 itens).'
+      },
+      {
+        id: 'colunas-verticais',
+        name: 'Colunas verticais',
+        url: 'https://app.flourish.studio/visualisation/30928442/edit',
+        whenToUse: 'Comparação vertical de volumes por período e séries temporais longas com muitas barras.'
+      },
+      {
+        id: 'barras-multiplas',
+        name: 'Barras múltiplas / empilhadas',
+        url: 'https://app.flourish.studio/visualisation/30928468/edit',
+        whenToUse: 'Pesquisas de opinião, comparações agrupadas ou empilhadas (100%) e cruzamento de variáveis.'
+      },
+      {
+        id: 'rosca-pizza',
+        name: 'Rosca / Pizza',
+        url: 'https://app.flourish.studio/visualisation/30928484/edit',
+        whenToUse: 'Percentuais e partes de um todo (100%) com no máximo 4 fatias e rótulos curtos.'
+      },
+      {
+        id: 'mapa-brasil',
+        name: 'Mapa do Brasil',
+        url: 'https://app.flourish.studio/visualisation/30928505/edit',
+        whenToUse: 'Dados regionais por estados brasileiros (UFs), distribuição geográfica e pontos por cidade.'
+      },
+      {
+        id: 'linha-do-tempo',
+        name: 'Linha do tempo',
+        url: 'https://app.flourish.studio/visualisation/30928567/edit',
+        whenToUse: 'Sequências históricas de eventos, retrospectivas e marcos cronológicos de uma cobertura.'
+      },
+      {
+        id: 'calculadora',
+        name: 'Calculadora',
+        url: 'https://app.flourish.studio/visualisation/30928606/edit',
+        whenToUse: 'Simuladores interativos personalizados para o leitor calcular o próprio cenário na matéria.'
+      },
+      {
+        id: 'tabela-interativa',
+        name: 'Tabela interativa',
+        url: 'https://app.flourish.studio/visualisation/30938786/edit',
+        whenToUse: 'Grandes listas de consulta direta, bases pesquisáveis pelo leitor e múltiplos indicadores lado a lado.'
+      }
+    ];
+
+    const PALETTE_COLORS = [
+      { hex: '#005F6B', name: 'Azul Petróleo', role: 'Série principal / Destaque' },
+      { hex: '#898A8E', name: 'Cinza Médio', role: 'Apoio / Outros / Branco ou Nulo' },
+      { hex: '#D0D2D6', name: 'Cinza Claro', role: 'Não sabe / Indecisos / Sem destaque' },
+      { hex: '#000000', name: 'Preto', role: 'Média / Meta / Textos' },
+      { hex: '#5E35B1', name: 'Roxo', role: 'Segunda série / Comparativo' },
+      { hex: '#D9383A', name: 'Vermelho Alerta', role: 'Alerta / Queda / Negativo' },
+      { hex: '#F28C28', name: 'Laranja', role: 'Terceira série / Contraste' },
+      { hex: '#00A8B5', name: 'Ciano', role: 'Série complementar / Degradês' },
+      { hex: '#A3B800', name: 'Verde Oliva', role: 'Série positiva alternativa' },
+      { hex: '#E6FF2A', name: 'Verde Limão', role: 'Fundos escuros / Destaques pontuais' }
+    ];
+
+    const MENU_DICTIONARY = [
+      {
+        pt: 'Título e linha fina',
+        en: 'Header > TITLE / SUBTITLE',
+        tip: 'Título curto e direto; linha fina informando período e unidade de medida (ex.: "Em %, entre 2022 e 2026").'
+      },
+      {
+        pt: 'Fonte dos dados',
+        en: 'Footer > TEXT > Source name / Source url e Source label',
+        tip: 'Sempre preencher nome e link da fonte e trocar "Source:" para "Fonte:".'
+      },
+      {
+        pt: 'Cores por coluna/linha e Custom overrides',
+        en: 'Colors > Color mode / Palette / Custom overrides',
+        tip: 'Use #005F6B para o destaque principal e cinzas para categorias neutras usando "Nome da coluna: #HEXdaCor".'
+      },
+      {
+        pt: 'Rótulos de dados (barras/linhas)',
+        en: 'Labels > DATA POINT LABELS > Show data point labels | LINE LABELS > Show labels on lines',
+        tip: 'Poucos dados: todos os números fixos. Séries longas: apenas primeiro e último fixos com escala ligada.'
+      },
+      {
+        pt: 'Formatação numérica e sufixos (%)',
+        en: 'Number formatting > Prefix / Suffix / Decimal places',
+        tip: 'Manter padrão PT-BR (vírgula decimal, ponto de milhar). Em calculadoras com taxas pequenas, usar 5 casas decimais.'
+      },
+      {
+        pt: 'Legenda',
+        en: 'Legend > Legend mode (ou REGION COLOR LEGEND em mapas)',
+        tip: 'Manter rótulos curtos e legíveis no topo; desligar a legenda quando houver apenas uma série.'
+      },
+      {
+        pt: 'Filtros (trocar All por Todos)',
+        en: 'Controls & filters > Include "All" > Name for "All"',
+        tip: 'Sempre traduzir o botão padrão "All" para "Todos" para evitar termos em inglês no gráfico.'
+      },
+      {
+        pt: 'Mapa (degradê, pontos e busca)',
+        en: 'Regions layer > Continuous colors > Palette > Custom | Points layer | Search > Search placeholder',
+        tip: 'Traduzir busca para "Pesquisar..." e conferir se o DF não aparece como "Federal District".'
+      },
+      {
+        pt: 'Linha do tempo (orientação Vertical/Horizontal)',
+        en: 'Timeline > Orientation (Vertical / Horizontal)',
+        tip: 'Preferir orientação Vertical para melhor leitura no celular e conferir para não exibir "1 Jan" antes do ano.'
+      },
+      {
+        pt: 'Tabela no celular (Mobile view > Blocks)',
+        en: 'Mobile view > Blocks e Rows per page',
+        tip: 'Obrigatório ativar "Blocks" no celular e definir "Rows per page = 3" para não quebrar a tela.'
+      },
+      {
+        pt: 'Teste no celular',
+        en: 'Ícone de smartphone (canto superior esquerdo da aba Preview)',
+        tip: 'Verifique sempre cortes de texto ("..."), sobreposição de números e conforto de leitura antes de publicar.'
+      },
+      {
+        pt: 'Publicação e Embed',
+        en: 'Export & publish > Embed on your website | CMS: ícone do Flourish > Flourish Embed > Ok',
+        tip: 'No CMS, clique no ícone do Flourish (asterisco ao lado do Bluesky e Instagram), cole o código e confirme em Ok.'
+      }
+    ];
+
+    const AI_SKILLS = [
+      {
+        title: 'Avalia qual gráfico usar',
+        description: 'Analisa tabelas, PDFs de pesquisas, planilhas, prints ou releases com números, sugere o melhor template do Portal VIVA com link direto e entrega a tabela limpa pronta para colar no Flourish.',
+        url: 'https://gemini.google.com/customize/skills/d/1yYcs38766TfuMSjMX_p3ooKaDS8XIMx0?usp=sharing'
+      },
+      {
+        title: 'Guia como construir o gráfico no Flourish',
+        description: 'Conduz passo a passo na criação e publicação de gráficos no Flourish — do modelo oficial até a inserção no CMS — e tira dúvidas rápidas sobre menus em inglês e regras da redação.',
+        url: 'https://gemini.google.com/customize/skills/d/1WiGeVDrOByyIB1gS_XTxv2EoMC8jKTlo?usp=sharing'
+      },
+      {
+        title: 'Ajuda a criar calculadoras',
+        description: 'Entrevista o repórter para coletar regras e parâmetros, gera a tabela da aba Questions, as fórmulas de Variables e o HTML de Result prontos para copiar e colar, e ajuda a corrigir erros.',
+        url: 'https://gemini.google.com/customize/skills/d/1VFFMMCKqN8JZJtfqEiys-2CVNpjCPHfD?usp=sharing'
+      },
+      {
+        title: 'Revisa gráficos',
+        description: 'Revisa prints do gráfico (desktop e celular) sem julgamento, checa itens obrigatórios (título, português e fonte), restos em inglês e manual visual, indicando onde clicar para ajustar.',
+        url: 'https://gemini.google.com/customize/skills/d/1WePE-JKRQDCriMGLI0XIGKy8-js_Fua8?usp=sharing'
+      }
+    ];
+
+    /* ========================================================================
+       DADOS DA NOVA CHECKLIST (7 PERGUNTAS + PRINTS DIRETOS DO GITHUB)
+       ======================================================================== */
+    const CHECKLIST_ITEMS = [
+      {
+        id: 'chk-1',
+        question: 'O gráfico está com nome correto e na pasta da editoria?',
+        steps: [
+          'Abra a pasta <span class="menu-tag">My projects » Modelos</span> e <strong>nunca edite o original</strong>.',
+          'Clique nos três pontinhos (ou no menu do modelo) e selecione <span class="menu-tag">Duplicate this visualization</span>.',
+          'Renomeie sua cópia no topo da tela com um nome claro da pauta e mova o arquivo para a pasta da sua editoria.'
+        ],
+        links: [
+          { label: 'Abrir Login do Flourish', url: PORTAL_DATA.loginUrl }
+        ],
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 015615.png',
+            caption: 'Pasta Modelos e duplicação do template'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 015527.png',
+            caption: 'Nome e pasta no topo do editor'
+          }
+        ]
+      },
+      {
+        id: 'chk-2',
+        question: 'O gráfico tem título?',
+        steps: [
+          'Na aba <span class="menu-tag">Preview</span>, vá em <span class="menu-tag">Header</span> &gt; <span class="menu-tag">TITLE</span> e escreva um título curto, direto e com verbo na voz ativa.',
+          'Logo abaixo, preencha <span class="menu-tag">SUBTITLE</span> (linha fina) com o recorte temporal e a unidade de medida (ex.: "Em %, entre 2022 e 2026").'
+        ],
+        links: [
+          { label: 'Manual Oficial no Drive', url: PORTAL_DATA.manualUrl }
+        ],
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 011046.png',
+            caption: 'Header > TITLE / SUBTITLE'
+          }
+        ]
+      },
+      {
+        id: 'chk-3',
+        question: 'O gráfico tem fontes?',
+        steps: [
+          'Na aba <span class="menu-tag">Preview</span>, abra <span class="menu-tag">Footer</span> &gt; <span class="menu-tag">TEXT</span>.',
+          'Preencha <span class="menu-tag">Source name</span> com o nome da fonte e <span class="menu-tag">Source url</span> com o link de referência.',
+          'Garanta que o campo <span class="menu-tag">Source label</span> esteja escrito <span class="menu-tag">Fonte:</span> (e não <span class="menu-tag">Source:</span>).'
+        ],
+        links: [],
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 011149.png',
+            caption: 'Footer > Source name / Source url / Source label'
+          }
+        ]
+      },
+      {
+        id: 'chk-4',
+        question: 'O gráfico foi testado na visualização de celular?',
+        steps: [
+          'Clique no ícone de smartphone no canto superior esquerdo da aba <span class="menu-tag">Preview</span> para testar o formato mobile.',
+          'Confira se não há textos cortados (<span class="menu-tag">...</span>), se os números importantes aparecem fixos sem precisar tocar na tela e se gráficos de rosca/pizza têm no máximo 4 fatias.',
+          'Em tabelas interativas, abra <span class="menu-tag">Mobile view</span> &gt; selecione <span class="menu-tag">Blocks</span> e defina <span class="menu-tag">Rows per page = 3</span>.'
+        ],
+        links: [
+          { label: 'Revisa gráficos no Gemini', url: PORTAL_DATA.geminiRevisorUrl }
+        ],
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 005819.png',
+            caption: 'Ícone de celular no Preview'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 183953.png',
+            caption: 'Tabela no celular: Blocks e Rows per page = 3'
+          }
+        ]
+      },
+      {
+        id: 'chk-5',
+        question: 'As cores estão no padrão do VIVA?',
+        steps: [
+          'Em <span class="menu-tag">Preview</span> &gt; <span class="menu-tag">Colors</span>, confira <span class="menu-tag">Color mode</span> (<span class="menu-tag">By column</span> ou <span class="menu-tag">By row</span>).',
+          'Use <span class="menu-tag">#005F6B</span> para o destaque principal e cinzas (<span class="menu-tag">#898A8E</span> / <span class="menu-tag">#D0D2D6</span>) para apoio via <span class="menu-tag">Custom overrides</span> no formato <span class="menu-tag">Nome da coluna: #HEXdaCor</span>.',
+          'Em mapas, ajuste o degradê em <span class="menu-tag">Regions layer</span> &gt; <span class="menu-tag">Continuous colors</span> &gt; <span class="menu-tag">Palette</span> &gt; <span class="menu-tag">Custom</span>.'
+        ],
+        showPaletteChips: true,
+        links: [],
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010438.png',
+            caption: 'Colors > Palette e Custom overrides'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 012540.png',
+            caption: 'Color mode: By column / By row'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 015051.png',
+            caption: 'Regions layer > Continuous colors para mapas'
+          }
+        ]
+      },
+      {
+        id: 'chk-6',
+        question: 'A fonte está em roboto?',
+        steps: [
+          'Verifique se a tipografia não foi alterada acidentalmente ao duplicar o modelo oficial do Portal VIVA.',
+          'Caso precise corrigir, vá em <span class="menu-tag">Preview</span> &gt; <span class="menu-tag">Layout</span> &gt; <span class="menu-tag">Main font</span> (ou <span class="menu-tag">Typography</span>) e selecione <span class="menu-tag">Roboto</span>.'
+        ],
+        links: [
+          { label: 'Manual Oficial no Drive', url: PORTAL_DATA.manualUrl }
+        ],
+        prints: []
+      },
+      {
+        id: 'chk-7',
+        question: 'Os textos estão todos em português?',
+        steps: [
+          'Revise se não sobraram termos padrão em inglês: <span class="menu-tag">Footer</span> &gt; <span class="menu-tag">Source label</span> &rarr; <span class="menu-tag">Fonte:</span>.',
+          'Em filtros, mude <span class="menu-tag">Controls &amp; filters</span> &gt; <span class="menu-tag">Name for "All"</span> &rarr; <span class="menu-tag">Todos</span>.',
+          'Em buscas, mude <span class="menu-tag">Search</span> &gt; <span class="menu-tag">Search placeholder</span> &rarr; <span class="menu-tag">Pesquisar...</span>.',
+          'Confira também se não apareceram meses em inglês, <span class="menu-tag">1 Jan</span> em linhas do tempo ou <span class="menu-tag">Federal District</span> em mapas.'
+        ],
+        links: [
+          { label: 'Revisa gráficos no Gemini', url: PORTAL_DATA.geminiRevisorUrl }
+        ],
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010342.png',
+            caption: 'Controls & filters > Name for "All": Todos'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 014435.png',
+            caption: 'Search > Search placeholder: Pesquisar...'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 011149.png',
+            caption: 'Footer > Source label: Fonte:'
+          }
+        ]
+      }
+    ];
+
+    const CMS_PUBLICATION_GUIDE = {
+      steps: [
+        'No canto superior direito do Flourish, clique em <span class="menu-tag">Export &amp; publish</span> para publicar ou atualizar o gráfico.',
+        'Copie o código HTML gerado em <span class="menu-tag">Embed on your website</span>.',
+        'No CMS do Portal VIVA, clique no ícone do Flourish (asterisco ao lado do Bluesky e Instagram), cole o código na janela <span class="menu-tag">Flourish Embed</span> e clique em <span class="menu-tag">Ok</span>.'
+      ],
+      prints: [
+        {
+          file: 'Captura de tela 2026-11-16 020050.png',
+          caption: 'Export & publish no Flourish'
+        }
+      ],
+      links: [
+        { label: 'Revisa gráficos no Gemini (checagem opcional)', url: PORTAL_DATA.geminiRevisorUrl }
+      ]
+    };
+
+    /* ========================================================================
+       ESTADO DA APLICAÇÃO
+       ======================================================================== */
+    const STORAGE_KEY_CHECKLIST = 'viva_flourish_checklist_v3';
+
+    const state = {
+      activeTab: 'templates', // "Templates" ativa por padrão no Hub final
+      passwordVisible: false,
+      dictQuery: '',
+      openPopoverId: null,
+      checklist: {},          // { 'chk-1': true, ... }
+      expandedTutorials: {},  // { 'chk-1': true, ... }
+      pendingGuideOpen: false
+    };
+
+    /* ========================================================================
+       UTILITÁRIOS: URL GITHUB, ESCAPE, NORMALIZAÇÃO, CÓPIA E TOASTS
+       ======================================================================== */
+    function getGithubPrintUrl(filename) {
+      return `${PORTAL_DATA.githubRawBase}${encodeURIComponent(filename)}`;
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function normalizeText(str) {
+      return String(str || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function showToast(message, variant = 'info', duration = 3400) {
+      const container = document.getElementById('toastContainer');
+      if (!container) return;
+
+      const styles = {
+        info: 'bg-viva-dark text-white border-l-4 border-l-teal-300',
+        warning: 'bg-red-950 text-red-50 border-l-4 border-l-viva-alert',
+        success: 'bg-emerald-900 text-emerald-50 border-l-4 border-l-emerald-400'
+      };
+
+      const toast = document.createElement('div');
+      toast.className = `pointer-events-auto px-4 py-3 rounded-xl shadow-lg text-sm font-medium leading-snug transition-all duration-200 animate-fade-slide ${styles[variant] || styles.info}`;
+      toast.textContent = message;
+      container.appendChild(toast);
+
+      window.setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        window.setTimeout(() => {
+          if (toast.parentNode) toast.parentNode.removeChild(toast);
+        }, 220);
+      }, duration);
+    }
+
+    /**
+     * Copia texto usando document.execCommand('copy') com fallback para Clipboard API,
+     * garantindo funcionamento confiável mesmo dentro de iframes.
+     */
+    function copyToClipboard(text, successMessage) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.top = '-9999px';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+
+      let copied = false;
+      try {
+        copied = document.execCommand('copy');
+      } catch (err) {
+        copied = false;
+      }
+      document.body.removeChild(textarea);
+
+      if (copied) {
+        showToast(successMessage, 'info');
+      } else if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+        navigator.clipboard.writeText(text).then(
+          () => showToast(successMessage, 'info'),
+          () => showToast('Não foi possível copiar automaticamente. Use Ctrl+C.', 'warning')
+        );
+      } else {
+        showToast('Não foi possível copiar automaticamente. Use Ctrl+C.', 'warning');
+      }
+    }
+
+    function readStorage(key, fallback) {
+      try {
+        const raw = window.localStorage.getItem(key);
+        const parsed = raw ? JSON.parse(raw) : fallback;
+        return parsed && typeof parsed === 'object' ? parsed : fallback;
+      } catch (err) {
+        return fallback;
+      }
+    }
+
+    function writeStorage(key, value) {
+      try {
+        window.localStorage.setItem(key, JSON.stringify(value));
+      } catch (err) {
+        // Ignora silenciosamente se o navegador bloquear localStorage
+      }
+    }
+
+    /* ========================================================================
+       ÍCONES SVG GRANDES DOS 9 TEMPLATES
+       ======================================================================== */
+    function getTemplateIconSvg(id) {
+      const icons = {
+        linhas: '<svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"></polyline><polyline points="17 7 21 7 21 11"></polyline></svg>',
+        'barras-horizontais': '<svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="15" y2="12"></line><line x1="4" y1="18" x2="11" y2="18"></line></svg>',
+        'colunas-verticais': '<svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="20" x2="6" y2="13"></line><line x1="12" y1="20" x2="12" y2="5"></line><line x1="18" y1="20" x2="18" y2="9"></line></svg>',
+        'barras-multiplas': '<svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="4" rx="1"></rect><rect x="3" y="10" width="14" height="4" rx="1"></rect><rect x="3" y="16" width="10" height="4" rx="1"></rect></svg>',
+        'rosca-pizza': '<svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>',
+        'mapa-brasil': '<svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>',
+        'linha-do-tempo': '<svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="2.2"></circle><circle cx="12" cy="12" r="2.2"></circle><circle cx="19" cy="12" r="2.2"></circle><line x1="7.2" y1="12" x2="9.8" y2="12"></line><line x1="14.2" y1="12" x2="16.8" y2="12"></line></svg>',
+        calculadora: '<svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="8" y1="11" x2="8.01" y2="11"></line><line x1="12" y1="11" x2="12.01" y2="11"></line><line x1="16" y1="11" x2="16.01" y2="11"></line><line x1="8" y1="16" x2="12" y2="16"></line><line x1="16" y1="16" x2="16.01" y2="16"></line></svg>',
+        'tabela-interativa': '<svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line><line x1="9" y1="3" x2="9" y2="21"></line></svg>'
+      };
+      return icons[id] || icons['barras-horizontais'];
+    }
+
+    /* ========================================================================
+       1. TOPO E CONTA COMPARTILHADA
+       ======================================================================== */
+    function initAccountSection() {
+      const btnCopyLogin = document.getElementById('btnCopyFlourishLogin');
+      const btnCopyEmail = document.getElementById('btnCopyEmail');
+      const btnCopyPassword = document.getElementById('btnCopyPassword');
+      const btnTogglePassword = document.getElementById('btnTogglePassword');
+      const passwordDisplay = document.getElementById('passwordDisplay');
+      const iconEyeOpen = document.getElementById('iconEyeOpen');
+      const iconEyeClosed = document.getElementById('iconEyeClosed');
+
+      function updatePasswordDisplay() {
+        if (state.passwordVisible) {
+          passwordDisplay.textContent = PORTAL_DATA.password;
+          iconEyeOpen.classList.add('hidden');
+          iconEyeClosed.classList.remove('hidden');
+          btnTogglePassword.setAttribute('aria-label', 'Ocultar senha');
+        } else {
+          passwordDisplay.textContent = '•'.repeat(PORTAL_DATA.password.length);
+          iconEyeOpen.classList.remove('hidden');
+          iconEyeClosed.classList.add('hidden');
+          btnTogglePassword.setAttribute('aria-label', 'Mostrar senha');
+        }
+      }
+
+      btnCopyLogin.addEventListener('click', () => {
+        copyToClipboard(PORTAL_DATA.loginUrl, 'Link de login do Flourish copiado!');
+      });
+
+      btnCopyEmail.addEventListener('click', () => {
+        copyToClipboard(PORTAL_DATA.email, 'E-mail adm.mkt@viva.com.br copiado!');
+      });
+
+      btnCopyPassword.addEventListener('click', () => {
+        copyToClipboard(PORTAL_DATA.password, 'Senha da conta compartilhada copiada!');
+      });
+
+      btnTogglePassword.addEventListener('click', () => {
+        state.passwordVisible = !state.passwordVisible;
+        updatePasswordDisplay();
+      });
+
+      updatePasswordDisplay();
+    }
+
+    /* ========================================================================
+       2. NAVEGAÇÃO POR ABAS
+       ======================================================================== */
+    function setActiveTab(tabId) {
+      state.activeTab = tabId;
+
+      document.querySelectorAll('.tab-btn').forEach((btn) => {
+        const isCurrent = btn.dataset.tab === tabId;
+        btn.setAttribute('aria-selected', String(isCurrent));
+
+        if (isCurrent) {
+          btn.className = 'tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold whitespace-nowrap transition border bg-viva-primary text-white border-viva-primary shadow-sm';
+        } else {
+          btn.className = 'tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold whitespace-nowrap transition border bg-transparent text-slate-600 border-transparent hover:bg-white hover:text-viva-dark hover:border-viva-light';
+        }
+
+        const pill = btn.querySelector('.tab-pill');
+        if (pill && pill.id !== 'tabChecklistBadge') {
+          pill.className = isCurrent
+            ? 'tab-pill px-2 py-0.5 rounded-full text-xs font-mono bg-white/20 text-white'
+            : 'tab-pill px-2 py-0.5 rounded-full text-xs font-mono bg-slate-200 text-viva-ink';
+        }
+      });
+
+      document.querySelectorAll('.tab-panel').forEach((panel) => {
+        const isCurrent = panel.id === `panel-${tabId}`;
+        panel.classList.toggle('hidden', !isCurrent);
+      });
+
+      updateChecklistTabBadge();
+    }
+
+    function initTabs() {
+      document.querySelectorAll('.tab-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          setActiveTab(btn.dataset.tab);
+        });
+      });
+
+      // Inicia na aba "Templates" por padrão
+      setActiveTab('templates');
+    }
+
+    /* ========================================================================
+       3. ABA 1 — TEMPLATES OFICIAIS (ENXUTA + POPOVER "?")
+       ======================================================================== */
+    function closeAllPopovers() {
+      state.openPopoverId = null;
+      document.querySelectorAll('.template-popover').forEach((pop) => {
+        pop.classList.add('hidden');
+      });
+      document.querySelectorAll('.btn-template-help').forEach((btn) => {
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    function openPopover(id) {
+      closeAllPopovers();
+      const pop = document.getElementById(`popover-${id}`);
+      const btn = document.getElementById(`help-btn-${id}`);
+      if (pop && btn) {
+        pop.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        state.openPopoverId = id;
+      }
+    }
+
+    function initTemplatesTab() {
+      const grid = document.getElementById('templatesGrid');
+
+      grid.innerHTML = TEMPLATES.map((tpl) => `
+        <article class="relative bg-white border border-viva-light hover:border-viva-primary rounded-xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between gap-5">
+          <!-- Cabeçalho do card: Ícone grande + Nome + Botão "?" -->
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-center gap-3.5 min-w-0">
+              <div class="w-12 h-12 rounded-xl bg-viva-soft text-viva-primary flex items-center justify-center shrink-0">
+                ${getTemplateIconSvg(tpl.id)}
+              </div>
+              <h3 class="text-base font-black text-viva-ink leading-snug">
+                ${escapeHtml(tpl.name)}
+              </h3>
+            </div>
+
+            <!-- Botão circular "?" + Popover flutuante -->
+            <div class="relative shrink-0 popover-wrapper" data-id="${escapeHtml(tpl.id)}">
+              <button
+                type="button"
+                id="help-btn-${escapeHtml(tpl.id)}"
+                data-id="${escapeHtml(tpl.id)}"
+                aria-expanded="false"
+                aria-controls="popover-${escapeHtml(tpl.id)}"
+                aria-label="Quando usar ${escapeHtml(tpl.name)}"
+                class="btn-template-help w-7 h-7 rounded-full border border-viva-light bg-slate-50 hover:bg-viva-primary hover:text-white hover:border-viva-primary text-viva-primary text-xs font-black flex items-center justify-center transition"
+              >
+                ?
+              </button>
+
+              <div
+                id="popover-${escapeHtml(tpl.id)}"
+                role="tooltip"
+                class="template-popover hidden absolute right-0 top-9 z-40 w-64 sm:w-72 bg-viva-ink text-white rounded-xl p-3.5 shadow-xl border border-slate-700"
+              >
+                <span class="block text-[11px] font-bold uppercase tracking-wider text-teal-300 mb-1">
+                  Quando usar
+                </span>
+                <p class="text-xs leading-relaxed text-slate-100">
+                  ${escapeHtml(tpl.whenToUse)}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botões na base -->
+          <div class="flex items-center gap-2.5 pt-3 border-t border-slate-100">
+            <a
+              href="${escapeHtml(tpl.url)}"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-name="${escapeHtml(tpl.name)}"
+              class="btn-open-template flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-viva-primary hover:bg-viva-dark text-white text-sm font-bold transition text-center"
+            >
+              <span>Abrir modelo &#8599;</span>
+            </a>
+            <button
+              type="button"
+              data-url="${escapeHtml(tpl.url)}"
+              data-name="${escapeHtml(tpl.name)}"
+              class="btn-copy-template inline-flex items-center justify-center px-3.5 py-2.5 rounded-lg bg-white hover:bg-viva-soft text-viva-primary border border-viva-light hover:border-viva-primary text-sm font-bold transition shrink-0"
+            >
+              Copiar link
+            </button>
+          </div>
+        </article>
+      `).join('');
+
+      // Interação do popover "?" (hover no desktop + clique/toque em qualquer dispositivo)
+      grid.querySelectorAll('.popover-wrapper').forEach((wrapper) => {
+        const id = wrapper.dataset.id;
+        const btn = wrapper.querySelector('.btn-template-help');
+
+        wrapper.addEventListener('mouseenter', () => {
+          openPopover(id);
+        });
+
+        wrapper.addEventListener('mouseleave', () => {
+          if (state.openPopoverId === id) {
+            closeAllPopovers();
+          }
+        });
+
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (state.openPopoverId === id) {
+            closeAllPopovers();
+          } else {
+            openPopover(id);
+          }
+        });
+      });
+
+      // Fechar popover ao clicar fora
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.popover-wrapper')) {
+          closeAllPopovers();
+        }
+      });
+
+      // Ações dos botões Abrir modelo e Copiar link
+      grid.querySelectorAll('.btn-open-template').forEach((link) => {
+        link.addEventListener('click', () => {
+          showToast(
+            `Lembrete (${link.dataset.name}): clique em "Duplicate this visualization" antes de editar o modelo!`,
+            'warning',
+            4800
+          );
+        });
+      });
+
+      grid.querySelectorAll('.btn-copy-template').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          copyToClipboard(btn.dataset.url, `Link do modelo "${btn.dataset.name}" copiado!`);
+        });
+      });
+    }
+
+    /* ========================================================================
+       4. ABA 2 — MANUAL, CORES E DICIONÁRIO DE MENUS
+       ======================================================================== */
+    function renderPalette() {
+      const grid = document.getElementById('paletteGrid');
+
+      grid.innerHTML = PALETTE_COLORS.map((color) => `
+        <div class="bg-white border border-viva-light rounded-xl overflow-hidden flex flex-col justify-between shadow-sm hover:border-viva-primary transition">
+          <div>
+            <!-- Amostra de cor uniforme -->
+            <div class="h-16 w-full border-b border-slate-100" style="background-color: ${escapeHtml(color.hex)};"></div>
+            <div class="p-3.5">
+              <div class="flex items-center justify-between gap-2">
+                <h4 class="text-sm font-bold text-viva-ink">${escapeHtml(color.name)}</h4>
+              </div>
+              <span class="inline-block mt-1 px-2 py-0.5 rounded bg-slate-100 font-mono text-xs font-bold text-viva-ink">
+                ${escapeHtml(color.hex)}
+              </span>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                ${escapeHtml(color.role)}
+              </p>
+            </div>
+          </div>
+
+          <div class="px-3.5 pb-3.5 pt-1">
+            <button
+              type="button"
+              data-hex="${escapeHtml(color.hex)}"
+              data-name="${escapeHtml(color.name)}"
+              class="btn-copy-hex w-full py-2.5 px-3 rounded-lg bg-viva-soft hover:bg-viva-primary text-viva-dark hover:text-white font-bold text-sm transition flex items-center justify-center gap-2"
+            >
+              <span>Copiar HEX</span>
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      grid.querySelectorAll('.btn-copy-hex').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          copyToClipboard(btn.dataset.hex, `Cor ${btn.dataset.hex} (${btn.dataset.name}) copiada!`);
+        });
+      });
+    }
+
+    function renderDictionary() {
+      const tbody = document.getElementById('dictTableBody');
+      const meta = document.getElementById('dictCountMeta');
+      const q = normalizeText(state.dictQuery.trim());
+
+      const filtered = MENU_DICTIONARY.filter((item) => {
+        if (!q) return true;
+        return normalizeText(`${item.pt} ${item.en} ${item.tip}`).includes(q);
+      });
+
+      meta.textContent = `Exibindo ${filtered.length} de ${MENU_DICTIONARY.length} atalhos`;
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="3" class="py-8 px-4 text-center text-sm text-viva-gray">
+              Nenhum menu encontrado para "${escapeHtml(state.dictQuery)}".
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map((item) => `
+        <tr class="hover:bg-slate-50 transition">
+          <td class="py-3.5 px-4 font-bold text-viva-ink align-top">
+            ${escapeHtml(item.pt)}
+          </td>
+          <td class="py-3.5 px-4 align-top">
+            <code class="inline-block px-2 py-1 rounded bg-viva-soft text-viva-dark font-mono text-xs font-semibold break-words">
+              ${escapeHtml(item.en)}
+            </code>
+          </td>
+          <td class="py-3.5 px-4 text-slate-600 align-top leading-relaxed">
+            ${escapeHtml(item.tip)}
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function initManualTab() {
+      document.getElementById('btnCopyManualLink').addEventListener('click', () => {
+        copyToClipboard(PORTAL_DATA.manualUrl, 'Link do Manual Oficial copiado!');
+      });
+
+      document.getElementById('btnCopyOverridesFormat').addEventListener('click', () => {
+        copyToClipboard(PORTAL_DATA.customOverridesExample, 'Formato "Nome da coluna: #HEXdaCor" copiado!');
+      });
+
+      renderPalette();
+
+      const searchInput = document.getElementById('dictSearchInput');
+      const clearBtn = document.getElementById('dictSearchClear');
+
+      searchInput.addEventListener('input', (e) => {
+        state.dictQuery = e.target.value;
+        if (state.dictQuery.length > 0) {
+          clearBtn.classList.remove('hidden');
+          clearBtn.classList.add('inline-flex');
+        } else {
+          clearBtn.classList.add('hidden');
+          clearBtn.classList.remove('inline-flex');
+        }
+        renderDictionary();
+      });
+
+      clearBtn.addEventListener('click', () => {
+        state.dictQuery = '';
+        searchInput.value = '';
+        clearBtn.classList.add('hidden');
+        clearBtn.classList.remove('inline-flex');
+        renderDictionary();
+        searchInput.focus();
+      });
+
+      renderDictionary();
+    }
+
+    /* ========================================================================
+       5. ABA 3 — ASSISTENTES DE IA (GRID 2x2 LIMPO E DIRETO)
+       ======================================================================== */
+    function initSkillsTab() {
+      const grid = document.getElementById('skillsGrid');
+
+      grid.innerHTML = AI_SKILLS.map((skill) => `
+        <article class="bg-white border border-viva-light hover:border-viva-primary rounded-xl p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between gap-5">
+          <div>
+            <h3 class="text-lg font-black text-viva-ink leading-snug">
+              ${escapeHtml(skill.title)}
+            </h3>
+            <p class="text-sm text-slate-600 mt-2.5 leading-relaxed">
+              ${escapeHtml(skill.description)}
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5 pt-4 border-t border-slate-100">
+            <a
+              href="${escapeHtml(skill.url)}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-viva-primary hover:bg-viva-dark text-white text-sm font-bold transition text-center"
+            >
+              <span>Abrir no Gemini &#8599;</span>
+            </a>
+            <button
+              type="button"
+              data-url="${escapeHtml(skill.url)}"
+              data-title="${escapeHtml(skill.title)}"
+              class="btn-copy-skill inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-white hover:bg-viva-soft text-viva-primary border border-viva-light hover:border-viva-primary text-sm font-bold transition shrink-0"
+            >
+              Copiar link
+            </button>
+          </div>
+        </article>
+      `).join('');
+
+      grid.querySelectorAll('.btn-copy-skill').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          copyToClipboard(btn.dataset.url, `Link de "${btn.dataset.title}" copiado!`);
+        });
+      });
+    }
+
+    /* ========================================================================
+       6. ABA 4 — NOVA CHECKLIST DE PUBLICAÇÃO (7 PERGUNTAS + PRINTS GITHUB)
+       ======================================================================== */
+    function getChecklistStats() {
+      const total = CHECKLIST_ITEMS.length;
+      const done = CHECKLIST_ITEMS.filter((item) => Boolean(state.checklist[item.id])).length;
+      const pendingItems = CHECKLIST_ITEMS.filter((item) => !state.checklist[item.id]);
+      return { total, done, pendingCount: pendingItems.length, pendingItems };
+    }
+
+    function updateChecklistTabBadge() {
+      const { total, done, pendingCount } = getChecklistStats();
+      const tabBadge = document.getElementById('tabChecklistBadge');
+      if (!tabBadge) return;
+
+      tabBadge.textContent = `${done}/${total}`;
+      const isChecklistTabActive = state.activeTab === 'checklist';
+
+      if (isChecklistTabActive) {
+        tabBadge.className = 'tab-pill px-2 py-0.5 rounded-full text-xs font-mono bg-white/20 text-white';
+      } else if (pendingCount === 0) {
+        tabBadge.className = 'tab-pill px-2 py-0.5 rounded-full text-xs font-mono bg-emerald-100 text-emerald-800';
+      } else {
+        tabBadge.className = 'tab-pill px-2 py-0.5 rounded-full text-xs font-mono bg-slate-200 text-viva-ink';
+      }
+    }
+
+    function buildChecklistPaletteChipsHtml() {
+      const chips = PALETTE_COLORS.map((color) => {
+        const isLime = color.hex.toUpperCase() === '#E6FF2A';
+        return `
+          <button
+            type="button"
+            data-copy-hex="${escapeHtml(color.hex)}"
+            data-copy-name="${escapeHtml(color.name)}"
+            title="Copiar ${escapeHtml(color.hex)} (${escapeHtml(color.name)})"
+            class="btn-copy-checklist-hex inline-flex items-center gap-2 px-2.5 py-1.5 rounded-lg border transition text-xs font-bold ${
+              isLime
+                ? 'bg-viva-ink text-white border-slate-700 hover:bg-slate-800'
+                : 'bg-white text-viva-ink border-viva-light hover:border-viva-primary hover:bg-viva-soft/60'
+            }"
+          >
+            <span
+              class="w-3.5 h-3.5 rounded-full border shrink-0 ${isLime ? 'border-white/40' : 'border-black/15'}"
+              style="background-color: ${escapeHtml(color.hex)};"
+            ></span>
+            <span>${escapeHtml(color.name)}</span>
+            <span class="font-mono font-medium ${isLime ? 'text-viva-lime' : 'text-slate-500'}">
+              ${escapeHtml(color.hex)}
+            </span>
+          </button>
+        `;
+      }).join('');
+
+      return `
+        <div class="bg-white border border-viva-light rounded-xl p-3.5 space-y-2.5">
+          <span class="block text-[11px] font-bold uppercase tracking-wider text-viva-primary">
+            Paleta Oficial Portal VIVA (clique para copiar o HEX)
+          </span>
+          <div class="flex flex-wrap gap-2">${chips}</div>
+          <p class="text-xs text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+            <span class="inline-block px-1.5 py-0.5 rounded bg-viva-ink text-viva-lime font-mono font-bold text-[11px] mr-1">#E6FF2A</span>
+            <strong>Atenção:</strong> não use o Verde Limão em linhas finas ou textos sobre fundo branco (use apenas como destaque sobre fundo escuro).
+          </p>
+        </div>
+      `;
+    }
+
+    function buildChecklistLinksHtml(links) {
+      if (!links || links.length === 0) return '';
+      return `
+        <div class="flex flex-wrap items-center gap-2 pt-1">
+          ${links
+            .map(
+              (link) => `
+                <a
+                  href="${escapeHtml(link.url)}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-viva-soft text-viva-primary border border-viva-light hover:border-viva-primary text-xs font-bold transition"
+                >
+                  <span>${escapeHtml(link.label)}</span>
+                  <span aria-hidden="true">&#8599;</span>
+                </a>
+              `
+            )
+            .join('')}
+        </div>
+      `;
+    }
+
+    /**
+     * Exibe os prints diretamente dentro do tutorial (sem exigir um segundo clique).
+     * Clicar na imagem abre o lightbox de zoom opcional.
+     */
+    function buildInlinePrintsHtml(prints) {
+      if (!prints || prints.length === 0) return '';
+
+      const gridCols = prints.length === 1
+        ? 'grid-cols-1 max-w-xl'
+        : prints.length === 2
+          ? 'grid-cols-1 sm:grid-cols-2'
+          : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
+
+      const cards = prints.map((print) => {
+        const url = getGithubPrintUrl(print.file);
+        return `
+          <figure class="group bg-white border border-viva-light rounded-xl overflow-hidden shadow-sm flex flex-col">
+            <button
+              type="button"
+              data-zoom-src="${escapeHtml(url)}"
+              data-zoom-caption="${escapeHtml(print.caption)}"
+              class="btn-zoom-print relative block w-full bg-slate-100 overflow-hidden text-left focus:outline-none focus:ring-2 focus:ring-viva-primary cursor-pointer"
+              title="Clique para ampliar o print"
+            >
+              <img
+                src="${escapeHtml(url)}"
+                alt="${escapeHtml(print.caption)}"
+                loading="lazy"
+                class="print-thumb w-full h-auto max-h-64 object-contain bg-white transition duration-200 group-hover:scale-[1.01]"
+              />
+              <!-- Fallback amigável caso a imagem falhe ao carregar -->
+              <div class="print-fallback hidden p-5 text-center bg-slate-50 text-slate-600 space-y-1">
+                <svg class="w-7 h-7 mx-auto text-viva-gray" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                <p class="text-xs font-bold text-viva-ink">Não foi possível carregar este print</p>
+                <p class="text-[11px] font-mono text-viva-gray break-all">${escapeHtml(print.file)}</p>
+              </div>
+              <span class="print-zoom-pill absolute right-2.5 bottom-2.5 px-2.5 py-1 rounded-full bg-viva-ink/80 text-white text-[11px] font-medium opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition inline-flex items-center gap-1 pointer-events-none">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                Ampliar
+              </span>
+            </button>
+            <figcaption class="px-3 py-2 text-xs text-slate-600 border-t border-slate-100 bg-white leading-snug">
+              ${escapeHtml(print.caption)}
+            </figcaption>
+          </figure>
+        `;
+      }).join('');
+
+      return `
+        <div class="space-y-2 pt-1">
+          <span class="block text-[11px] font-bold uppercase tracking-wider text-viva-gray">
+            Prints de referência (clique na imagem para ampliar)
+          </span>
+          <div class="grid ${gridCols} gap-3">
+            ${cards}
+          </div>
+        </div>
+      `;
+    }
+
+    function buildTutorialBodyHtml(item) {
+      const stepsHtml = item.steps
+        .map(
+          (step, idx) => `
+            <li class="flex items-start gap-2.5 text-sm text-viva-ink leading-relaxed">
+              <span class="w-5 h-5 rounded-full bg-viva-soft text-viva-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+                ${idx + 1}
+              </span>
+              <span class="flex-1">${step}</span>
+            </li>
+          `
+        )
+        .join('');
+
+      return `
+        <ol class="space-y-2.5">${stepsHtml}</ol>
+        ${item.showPaletteChips ? buildChecklistPaletteChipsHtml() : ''}
+        ${buildChecklistLinksHtml(item.links)}
+        ${buildInlinePrintsHtml(item.prints)}
+      `;
+    }
+
+    function attachImageFallbackHandlers(containerEl) {
+      if (!containerEl) return;
+      containerEl.querySelectorAll('img.print-thumb').forEach((img) => {
+        img.addEventListener('error', () => {
+          img.classList.add('hidden');
+          const btn = img.closest('.btn-zoom-print');
+          if (!btn) return;
+          const fallback = btn.querySelector('.print-fallback');
+          const pill = btn.querySelector('.print-zoom-pill');
+          if (fallback) fallback.classList.remove('hidden');
+          if (pill) pill.classList.add('hidden');
+          btn.disabled = true;
+          btn.classList.remove('cursor-pointer');
+          btn.removeAttribute('title');
+        });
+      });
+    }
+
+    function updateChecklistProgressUI() {
+      const { total, done, pendingCount } = getChecklistStats();
+      const percent = total > 0 ? Math.round((done / total) * 100) : 0;
+
+      const counterEl = document.getElementById('checklistProgressCounter');
+      const barFill = document.getElementById('checklistProgressBar');
+      const barWrapper = document.getElementById('checklistProgressWrapper');
+      const doneBadge = document.getElementById('checklistDoneBadge');
+
+      counterEl.textContent = `${done}/${total} concluídos`;
+      barFill.style.width = `${percent}%`;
+      barWrapper.setAttribute('aria-valuenow', String(done));
+
+      if (pendingCount === 0) {
+        counterEl.className = 'text-sm font-bold text-emerald-700';
+        barFill.className = 'h-full bg-emerald-600 rounded-full transition-all duration-300 ease-out';
+        doneBadge.classList.remove('hidden');
+        doneBadge.classList.add('inline-flex');
+      } else {
+        counterEl.className = 'text-sm font-bold text-viva-primary';
+        barFill.className = 'h-full bg-viva-primary rounded-full transition-all duration-300 ease-out';
+        doneBadge.classList.add('hidden');
+        doneBadge.classList.remove('inline-flex');
+      }
+
+      // Botão principal abaixo da lista
+      const btn = document.getElementById('btnShowPendingGuide');
+      const btnLabel = document.getElementById('btnShowPendingLabel');
+      const btnIcon = document.getElementById('btnShowPendingIcon');
+
+      if (pendingCount === 0) {
+        btn.className = 'w-full py-4 px-5 rounded-xl bg-emerald-700 hover:bg-emerald-800 active:scale-[0.995] text-white font-bold text-sm sm:text-base shadow-sm transition flex items-center justify-center gap-2.5';
+        btnLabel.textContent = 'Ver guia final de publicação no CMS ✓';
+        btnIcon.innerHTML = `
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        `;
+      } else {
+        const pendingWord = pendingCount === 1 ? '1 pendente' : `${pendingCount} pendentes`;
+        btn.className = 'w-full py-4 px-5 rounded-xl bg-viva-primary hover:bg-viva-dark active:scale-[0.995] text-white font-bold text-sm sm:text-base shadow-sm transition flex items-center justify-center gap-2.5';
+        btnLabel.textContent = `Ver tutorial do que falta fazer (${pendingWord})`;
+        btnIcon.innerHTML = `
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 11l3 3L22 4"></path>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+          </svg>
+        `;
+      }
+
+      updateChecklistTabBadge();
+    }
+
+    function renderChecklistList() {
+      const listEl = document.getElementById('checklistItemsList');
+
+      listEl.innerHTML = CHECKLIST_ITEMS.map((item) => {
+        const isChecked = Boolean(state.checklist[item.id]);
+        const isExpanded = Boolean(state.expandedTutorials[item.id]);
+
+        return `
+          <li class="bg-white border rounded-xl shadow-sm transition ${
+            isChecked
+              ? 'border-emerald-300 bg-emerald-50/40'
+              : 'border-viva-light hover:border-viva-primary/70'
+          }">
+            <!-- Linha da pergunta -->
+            <div class="p-4 sm:px-5 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <label class="flex items-start gap-3.5 cursor-pointer flex-1 min-w-0 select-none">
+                <input
+                  type="checkbox"
+                  data-item-id="${escapeHtml(item.id)}"
+                  ${isChecked ? 'checked' : ''}
+                  class="checklist-checkbox mt-0.5 w-5 h-5 rounded border-viva-gray accent-[#005F6B] cursor-pointer shrink-0"
+                />
+                <span class="text-sm sm:text-base font-medium leading-snug transition ${
+                  isChecked ? 'line-through text-viva-gray' : 'text-viva-ink'
+                }">
+                  ${escapeHtml(item.question)}
+                </span>
+              </label>
+
+              <!-- Botão "Como fazer" com seta rotativa -->
+              <button
+                type="button"
+                data-toggle-id="${escapeHtml(item.id)}"
+                aria-expanded="${isExpanded ? 'true' : 'false'}"
+                aria-controls="tutorial-${escapeHtml(item.id)}"
+                class="btn-toggle-tutorial self-end sm:self-center inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold border transition shrink-0 ${
+                  isExpanded
+                    ? 'bg-viva-primary text-white border-viva-primary'
+                    : 'bg-white hover:bg-viva-soft text-viva-primary border-viva-light hover:border-viva-primary'
+                }"
+              >
+                <span>Como fazer</span>
+                <svg
+                  class="w-3.5 h-3.5 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Painel expansível inline -->
+            <div
+              id="tutorial-${escapeHtml(item.id)}"
+              class="${isExpanded ? 'block' : 'hidden'} px-4 sm:px-5 pb-5 pt-4 border-t border-slate-200 bg-slate-50/80 rounded-b-xl space-y-4 animate-fade-slide"
+            >
+              ${buildTutorialBodyHtml(item)}
+            </div>
+          </li>
+        `;
+      }).join('');
+
+      attachImageFallbackHandlers(listEl);
+    }
+
+    function renderPendingGuide() {
+      const section = document.getElementById('pendingGuideSection');
+      const header = document.getElementById('pendingGuideHeader');
+      const titleEl = document.getElementById('pendingGuideTitle');
+      const subtitleEl = document.getElementById('pendingGuideSubtitle');
+      const bodyEl = document.getElementById('pendingGuideBody');
+
+      if (!state.pendingGuideOpen) {
+        section.classList.add('hidden');
+        return;
+      }
+
+      section.classList.remove('hidden');
+      const { pendingItems } = getChecklistStats();
+
+      // Caso 1: Todos os 7 itens marcados -> Card verde de sucesso + publicação no CMS
+      if (pendingItems.length === 0) {
+        header.className = 'px-5 py-4 bg-emerald-50 border-b border-emerald-200 flex flex-wrap items-center justify-between gap-3';
+        titleEl.className = 'text-base sm:text-lg font-black text-emerald-900';
+        titleEl.textContent = 'Tudo pronto! Guia final de publicação no CMS';
+        subtitleEl.textContent = 'Todos os 7 itens foram validados. Siga os passos abaixo para inserir o gráfico na matéria.';
+
+        const stepsHtml = CMS_PUBLICATION_GUIDE.steps
+          .map(
+            (step, idx) => `
+              <li class="flex items-start gap-3 text-sm text-viva-ink leading-relaxed">
+                <span class="w-6 h-6 rounded-full bg-emerald-700 text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+                  ${idx + 1}
+                </span>
+                <span class="flex-1">${step}</span>
+              </li>
+            `
+          )
+          .join('');
+
+        bodyEl.innerHTML = `
+          <div class="bg-emerald-50/50 border border-emerald-200 rounded-xl p-4 sm:p-5 space-y-4">
+            <ol class="space-y-3">${stepsHtml}</ol>
+            ${buildChecklistLinksHtml(CMS_PUBLICATION_GUIDE.links)}
+            ${buildInlinePrintsHtml(CMS_PUBLICATION_GUIDE.prints)}
+          </div>
+        `;
+        attachImageFallbackHandlers(bodyEl);
+        return;
+      }
+
+      // Caso 2: Há itens pendentes -> Passo a passo apenas dos não marcados
+      header.className = 'px-5 py-4 bg-viva-soft/80 border-b border-viva-light flex flex-wrap items-center justify-between gap-3';
+      titleEl.className = 'text-base sm:text-lg font-black text-viva-dark';
+      titleEl.textContent = 'Passo a passo do que falta fazer';
+      subtitleEl.textContent =
+        pendingItems.length === 1
+          ? 'Falta apenas 1 item para liberar seu gráfico para publicação.'
+          : `Faltam ${pendingItems.length} itens. Resolva e marque cada um conforme finalizar.`;
+
+      bodyEl.innerHTML = pendingItems
+        .map(
+          (item, index) => `
+            <article class="bg-slate-50/90 border border-viva-light rounded-xl p-4 sm:p-5 space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200">
+                <div class="flex items-start gap-2.5 min-w-0">
+                  <span class="w-6 h-6 rounded-lg bg-viva-primary text-viva-lime text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+                    ${index + 1}
+                  </span>
+                  <h4 class="text-sm sm:text-base font-bold text-viva-ink leading-snug">
+                    ${escapeHtml(item.question)}
+                  </h4>
+                </div>
+
+                <button
+                  type="button"
+                  data-mark-done-id="${escapeHtml(item.id)}"
+                  class="btn-mark-done self-end sm:self-center inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-50 hover:bg-emerald-700 text-emerald-800 hover:text-white border border-emerald-300 text-xs font-bold transition shrink-0"
+                >
+                  <span>Marcar como feito &#10003;</span>
+                </button>
+              </div>
+
+              ${buildTutorialBodyHtml(item)}
+            </article>
+          `
+        )
+        .join('');
+
+      attachImageFallbackHandlers(bodyEl);
+    }
+
+    function renderChecklistAll() {
+      renderChecklistList();
+      updateChecklistProgressUI();
+      renderPendingGuide();
+    }
+
+    /* ========================================================================
+       7. MODAL LIGHTBOX GLOBAL (ZOOM DOS PRINTS)
+       ======================================================================== */
+    function openZoomModal(src, caption) {
+      const modal = document.getElementById('zoomModal');
+      const img = document.getElementById('zoomModalImg');
+      const captionEl = document.getElementById('zoomModalCaption');
+      const rawLink = document.getElementById('zoomModalRawLink');
+
+      img.src = src;
+      img.alt = caption || 'Print ampliado';
+      captionEl.textContent = caption || 'Print ampliado';
+      rawLink.href = src;
+
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+      document.getElementById('btnCloseZoom').focus();
+    }
+
+    function closeZoomModal() {
+      const modal = document.getElementById('zoomModal');
+      const img = document.getElementById('zoomModalImg');
+      if (modal.classList.contains('hidden')) return;
+      modal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+      img.src = '';
+    }
+
+    function initChecklistTab() {
+      state.checklist = readStorage(STORAGE_KEY_CHECKLIST, {});
+      renderChecklistAll();
+
+      const checklistPanel = document.getElementById('panel-checklist');
+
+      // Delegação: marcar/desmarcar checkboxes
+      checklistPanel.addEventListener('change', (e) => {
+        const checkbox = e.target.closest('.checklist-checkbox');
+        if (!checkbox) return;
+        const id = checkbox.dataset.itemId;
+        state.checklist[id] = checkbox.checked;
+        writeStorage(STORAGE_KEY_CHECKLIST, state.checklist);
+        renderChecklistAll();
+      });
+
+      // Delegação: abrir tutorial, copiar HEX da checklist, zoom de prints, marcar como feito
+      checklistPanel.addEventListener('click', (e) => {
+        const toggleBtn = e.target.closest('.btn-toggle-tutorial');
+        if (toggleBtn) {
+          const id = toggleBtn.dataset.toggleId;
+          state.expandedTutorials[id] = !state.expandedTutorials[id];
+          renderChecklistList();
+          return;
+        }
+
+        const hexBtn = e.target.closest('.btn-copy-checklist-hex');
+        if (hexBtn) {
+          copyToClipboard(
+            hexBtn.dataset.copyHex,
+            `Cor ${hexBtn.dataset.copyHex} (${hexBtn.dataset.copyName}) copiada!`
+          );
+          return;
+        }
+
+        const zoomBtn = e.target.closest('.btn-zoom-print');
+        if (zoomBtn && !zoomBtn.disabled) {
+          openZoomModal(zoomBtn.dataset.zoomSrc, zoomBtn.dataset.zoomCaption);
+          return;
+        }
+
+        const markDoneBtn = e.target.closest('.btn-mark-done');
+        if (markDoneBtn) {
+          const id = markDoneBtn.dataset.markDoneId;
+          state.checklist[id] = true;
+          writeStorage(STORAGE_KEY_CHECKLIST, state.checklist);
+          renderChecklistAll();
+          showToast('Item marcado como feito!', 'success');
+        }
+      });
+
+      // Botão "Limpar marcações"
+      document.getElementById('btnClearChecklist').addEventListener('click', () => {
+        state.checklist = {};
+        writeStorage(STORAGE_KEY_CHECKLIST, state.checklist);
+        renderChecklistAll();
+        showToast('Checklist limpa para um novo gráfico!', 'info');
+      });
+
+      // Botão principal abaixo da lista
+      document.getElementById('btnShowPendingGuide').addEventListener('click', () => {
+        state.pendingGuideOpen = true;
+        renderPendingGuide();
+        document.getElementById('pendingGuideSection').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+
+      // Botão fechar painel inferior
+      document.getElementById('btnClosePendingGuide').addEventListener('click', () => {
+        state.pendingGuideOpen = false;
+        renderPendingGuide();
+      });
+
+      // Eventos do modal Lightbox
+      document.getElementById('btnCloseZoom').addEventListener('click', closeZoomModal);
+      document.getElementById('zoomModal').addEventListener('click', (e) => {
+        if (e.target.id === 'zoomModal') {
+          closeZoomModal();
+        }
+      });
+    }
+
+    /* ========================================================================
+       ATALHO GLOBAL ESC (FECHA LIGHTBOX E POPOVERS)
+       ======================================================================== */
+    function initGlobalKeyboard() {
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeZoomModal();
+          closeAllPopovers();
+        }
+      });
+    }
+
+    /* ========================================================================
+       INICIALIZAÇÃO GERAL
+       ======================================================================== */
+    document.addEventListener('DOMContentLoaded', () => {
+      initAccountSection();
+      initTemplatesTab();
+      initManualTab();
+      initSkillsTab();
+      initChecklistTab();
+      initTabs();
+      initGlobalKeyboard();
+    });
+  </script>
+</body>
+</html>
