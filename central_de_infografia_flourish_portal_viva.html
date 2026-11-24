@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Central de Infografia Flourish | Portal VIVA</title>
 
-  <!-- Google Fonts: Roboto e Roboto Mono -->
+  <!-- Google Fonts: Roboto (400, 500, 700, 900) e Roboto Mono (400, 500, 600, 700) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -41,7 +41,7 @@
   </script>
 
   <style>
-    /* Ajustes complementares de tipografia, rolagem e animações */
+    /* Base tipográfica, fundo editorial e animações suaves */
     body {
       font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       color: #1E293B;
@@ -56,7 +56,7 @@
       scrollbar-width: none;
     }
 
-    /* Destaque para caminhos de menu em inglês do Flourish nos tutoriais */
+    /* Classe utilitária para destacar caminhos de menu em inglês do Flourish */
     .menu-tag {
       display: inline-block;
       padding: 0.08rem 0.45rem;
@@ -89,7 +89,7 @@
 <body class="min-h-screen flex flex-col antialiased selection:bg-viva-soft selection:text-viva-dark">
 
   <!-- ======================================================================
-       1. CABEÇALHO EDITORIAL LIMPO
+       1. CABEÇALHO EDITORIAL
        ====================================================================== -->
   <header class="bg-gradient-to-r from-viva-dark to-viva-primary text-white border-b-4 border-viva-dark shadow-sm">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
@@ -104,7 +104,7 @@
           Portal VIVA | Central de Infografia Flourish
         </h1>
         <p class="text-sm text-viva-soft/90 mt-1">
-          Acesso rápido à conta da redação, templates oficiais, manual visual, assistentes de IA e checklist de publicação.
+          Acesso rápido à conta da redação, templates oficiais, manual visual, assistentes de IA, checklist de publicação e guia visual com prints.
         </p>
       </div>
     </div>
@@ -227,7 +227,7 @@
   </section>
 
   <!-- ======================================================================
-       3. NAVEGAÇÃO EM 4 ABAS (STICKY) — "Templates" ATIVA POR PADRÃO
+       3. NAVEGAÇÃO EM 5 ABAS (STICKY) — "Templates" ATIVA POR PADRÃO
        ====================================================================== -->
   <nav class="sticky top-0 z-30 bg-[#F4F6F8]/95 backdrop-blur border-b border-viva-light mt-3" aria-label="Navegação principal">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -282,12 +282,25 @@
           <span>Checklist de Publicação</span>
           <span id="tabChecklistBadge" class="tab-pill px-2 py-0.5 rounded-full text-xs font-mono">0/7</span>
         </button>
+
+        <button
+          type="button"
+          role="tab"
+          id="tab-guia-visual"
+          data-tab="guia-visual"
+          aria-controls="panel-guia-visual"
+          aria-selected="false"
+          class="tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold whitespace-nowrap transition border"
+        >
+          <span>Guia Visual (Prints)</span>
+          <span class="tab-pill px-2 py-0.5 rounded-full text-xs font-mono">24</span>
+        </button>
       </div>
     </div>
   </nav>
 
   <!-- ======================================================================
-       CONTEÚDO PRINCIPAL DAS 4 ABAS
+       CONTEÚDO PRINCIPAL DAS 5 ABAS
        ====================================================================== -->
   <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 py-7 flex-1">
 
@@ -381,13 +394,13 @@
         </div>
       </div>
 
-      <!-- Dicionário de Menus do Flourish (EN -> PT) SEM coluna "Ação" -->
+      <!-- Dicionário de Menus do Flourish (EN -> PT) — 3 colunas + botões de print na 2ª coluna -->
       <div class="bg-white border border-viva-light rounded-xl p-5 sm:p-6 shadow-sm">
         <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-4">
           <div>
             <h3 class="text-lg font-black text-viva-ink">Dicionário de Menus do Flourish (EN &rarr; PT)</h3>
             <p class="text-sm text-slate-600 mt-0.5">
-              Pesquise o que você deseja ajustar para encontrar o caminho exato na interface em inglês do Flourish.
+              Pesquise o que você deseja ajustar para encontrar o caminho exato na interface em inglês do Flourish e abrir os prints de referência.
             </p>
           </div>
           <span id="dictCountMeta" class="text-xs font-semibold text-viva-gray"></span>
@@ -452,7 +465,7 @@
     </section>
 
     <!-- ====================================================================
-         ABA 4 — NOVA CHECKLIST DE PUBLICAÇÃO (7 PERGUNTAS + PRINTS GITHUB)
+         ABA 4 — CHECKLIST DE PUBLICAÇÃO (7 PERGUNTAS + PRINTS GITHUB)
          ==================================================================== -->
     <section id="panel-checklist" role="tabpanel" aria-labelledby="tab-checklist" class="tab-panel hidden animate-fade-slide space-y-5">
       <div>
@@ -552,6 +565,96 @@
         </div>
       </div>
     </section>
+
+    <!-- ====================================================================
+         ABA 5 — GUIA VISUAL (PRINTS): ONDE MEXER NO FLOURISH (24 DÚVIDAS)
+         ==================================================================== -->
+    <section id="panel-guia-visual" role="tabpanel" aria-labelledby="tab-guia-visual" class="tab-panel hidden animate-fade-slide space-y-5">
+      <!-- Cabeçalho da aba -->
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-black text-viva-ink tracking-tight">
+            Guia Visual: Onde Mexer no Flourish
+          </h2>
+          <p class="text-sm text-slate-600 mt-1">
+            Pesquise sua dúvida ou filtre por categoria para ver exatamente onde clicar na interface do Flourish.
+          </p>
+        </div>
+
+        <div class="shrink-0 inline-flex items-center gap-2 text-xs text-viva-gray bg-white border border-viva-light rounded-lg px-3.5 py-2 self-start sm:self-end shadow-sm">
+          <svg class="w-4 h-4 text-viva-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+          </svg>
+          <span><strong id="visualGuideTotalPrints" class="text-viva-ink">30 prints</strong> clicáveis para ampliar</span>
+        </div>
+      </div>
+
+      <!-- Painel de busca + 8 chips de categoria + barra de controle -->
+      <div class="bg-white border border-viva-light rounded-xl p-4 sm:p-5 shadow-sm space-y-4">
+        <!-- Campo de busca instantânea -->
+        <div class="relative">
+          <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-viva-gray pointer-events-none">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+          <input
+            id="visualGuideSearchInput"
+            type="search"
+            autocomplete="off"
+            placeholder='Digite sua dúvida (ex.: "All", "celular", "fonte", "degradê", "calculadora", "%", "duplicar")...'
+            aria-label="Pesquisar dúvida no Guia Visual do Flourish"
+            class="w-full pl-11 pr-11 py-3 rounded-xl bg-slate-50 border border-viva-light text-sm sm:text-base text-viva-ink placeholder:text-viva-gray focus:outline-none focus:bg-white focus:border-viva-primary focus:ring-2 focus:ring-viva-primary/20 transition"
+          />
+          <button
+            id="btnVisualGuideClearSearch"
+            type="button"
+            aria-label="Limpar busca do guia visual"
+            title="Limpar busca"
+            class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full text-slate-500 hover:bg-slate-200 hover:text-viva-ink items-center justify-center text-xl leading-none transition"
+          >
+            &times;
+          </button>
+        </div>
+
+        <!-- 8 Chips de filtro por categoria -->
+        <div
+          id="visualGuideCategoryChips"
+          class="flex flex-wrap items-center gap-2"
+          role="group"
+          aria-label="Filtrar dúvidas por categoria"
+        ></div>
+
+        <!-- Barra de controle: contador + Expandir/Recolher tudo -->
+        <div class="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+          <div class="flex flex-wrap items-center gap-2">
+            <p id="visualGuideResultsCounter" class="text-xs sm:text-sm font-semibold text-viva-gray">
+              Exibindo 24 de 24 dúvidas
+            </p>
+            <span
+              id="visualGuideAutoOpenHint"
+              class="hidden px-2 py-0.5 rounded-full text-[11px] font-bold bg-viva-soft text-viva-dark"
+            >
+              Prints abertos automaticamente
+            </span>
+          </div>
+
+          <button
+            id="btnVisualGuideToggleAll"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white hover:bg-viva-soft text-viva-primary border border-viva-light hover:border-viva-primary text-xs font-bold transition"
+          >
+            <span id="btnVisualGuideToggleAllLabel">Expandir tudo</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Lista em acordeão das 24 dúvidas -->
+      <div id="visualGuideAccordionList" class="space-y-3"></div>
+    </section>
   </main>
 
   <!-- ======================================================================
@@ -565,7 +668,7 @@
   </footer>
 
   <!-- ======================================================================
-       MODAL LIGHTBOX GLOBAL — AMPLIAÇÃO DE PRINTS DA CHECKLIST
+       MODAL LIGHTBOX GLOBAL (#zoomModal) — DICIONÁRIO + CHECKLIST + GUIA VISUAL
        ====================================================================== -->
   <div
     id="zoomModal"
@@ -598,7 +701,7 @@
         </button>
       </div>
 
-      <!-- Imagem ampliada -->
+      <!-- Imagem ampliada com fallback gracioso -->
       <div class="p-4 sm:p-6 bg-slate-900 overflow-auto flex-1 flex items-center justify-center">
         <img
           id="zoomModalImg"
@@ -606,6 +709,19 @@
           alt="Print ampliado"
           class="max-w-full max-h-[75vh] rounded-lg shadow-lg object-contain bg-white"
         />
+        <div
+          id="zoomModalFallback"
+          class="hidden max-w-md w-full rounded-xl bg-slate-800 border border-slate-700 p-6 text-center text-slate-200 space-y-2"
+        >
+          <svg class="w-9 h-9 mx-auto text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+          </svg>
+          <p class="text-sm font-bold text-white">Não foi possível carregar este print</p>
+          <p id="zoomModalFallbackFile" class="text-xs font-mono text-slate-300 break-all"></p>
+          <p class="text-xs text-slate-400">Verifique sua conexão ou tente abrir a imagem original pelo link abaixo.</p>
+        </div>
       </div>
 
       <!-- Rodapé do lightbox -->
@@ -628,11 +744,13 @@
   <div id="toastContainer" class="fixed right-4 bottom-4 z-50 flex flex-col gap-2 max-w-sm w-[calc(100%-2rem)] sm:w-auto pointer-events-none" aria-live="polite" aria-atomic="true"></div>
 
   <!-- ======================================================================
-       JAVASCRIPT — DADOS E LÓGICA INTERATIVA UNIFICADA
+       JAVASCRIPT — DADOS COMPLETOS E LÓGICA UNIFICADA (5 ABAS)
        ====================================================================== -->
   <script>
+    'use strict';
+
     /* ========================================================================
-       CONSTANTES DE CONFIGURAÇÃO E DADOS OFICIAIS DO PORTAL VIVA
+       1. CONSTANTES DE CONFIGURAÇÃO E DADOS OFICIAIS DO PORTAL VIVA
        ======================================================================== */
     const PORTAL_DATA = {
       loginUrl: 'https://app.flourish.studio/login?_sp=6bd0cbf1-599b-4708-99c0-670ebd6a1e00.1795408165408',
@@ -644,6 +762,9 @@
       githubRawBase: 'https://raw.githubusercontent.com/felipecavas/FlorishVIVA/main/'
     };
 
+    const STORAGE_KEY_CHECKLIST = 'viva_flourish_checklist_v3';
+
+    /* 9 Templates Oficiais */
     const TEMPLATES = [
       {
         id: 'linhas',
@@ -701,6 +822,7 @@
       }
     ];
 
+    /* 10 Cores Oficiais da Paleta */
     const PALETTE_COLORS = [
       { hex: '#005F6B', name: 'Azul Petróleo', role: 'Série principal / Destaque' },
       { hex: '#898A8E', name: 'Cinza Médio', role: 'Apoio / Outros / Branco ou Nulo' },
@@ -714,69 +836,190 @@
       { hex: '#E6FF2A', name: 'Verde Limão', role: 'Fundos escuros / Destaques pontuais' }
     ];
 
+    /* 12 Itens do Dicionário de Menus (EN -> PT) com botões de print */
     const MENU_DICTIONARY = [
       {
         pt: 'Título e linha fina',
         en: 'Header > TITLE / SUBTITLE',
-        tip: 'Título curto e direto; linha fina informando período e unidade de medida (ex.: "Em %, entre 2022 e 2026").'
+        tip: 'Título curto e direto; linha fina informando período e unidade de medida (ex.: "Em %, entre 2022 e 2026").',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 011046.png',
+            label: 'Ver print: Header',
+            caption: 'Header > TITLE / SUBTITLE'
+          }
+        ]
       },
       {
         pt: 'Fonte dos dados',
         en: 'Footer > TEXT > Source name / Source url e Source label',
-        tip: 'Sempre preencher nome e link da fonte e trocar "Source:" para "Fonte:".'
+        tip: 'Sempre preencher nome e link da fonte e trocar "Source:" para "Fonte:".',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 011149.png',
+            label: 'Ver print: Footer',
+            caption: 'Footer > Source name / Source url / Source label'
+          }
+        ]
       },
       {
         pt: 'Cores por coluna/linha e Custom overrides',
         en: 'Colors > Color mode / Palette / Custom overrides',
-        tip: 'Use #005F6B para o destaque principal e cinzas para categorias neutras usando "Nome da coluna: #HEXdaCor".'
+        tip: 'Use #005F6B para o destaque principal e cinzas para categorias neutras usando "Nome da coluna: #HEXdaCor".',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010438.png',
+            label: 'Print: Custom overrides',
+            caption: 'Colors > Palette e Custom overrides'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 012540.png',
+            label: 'Print: Color mode',
+            caption: 'Colors > Color mode: By column / By row'
+          }
+        ]
       },
       {
         pt: 'Rótulos de dados (barras/linhas)',
         en: 'Labels > DATA POINT LABELS > Show data point labels | LINE LABELS > Show labels on lines',
-        tip: 'Poucos dados: todos os números fixos. Séries longas: apenas primeiro e último fixos com escala ligada.'
+        tip: 'Poucos dados: todos os números fixos. Séries longas: apenas primeiro e último fixos com escala ligada.',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010644.png',
+            label: 'Print: Data labels',
+            caption: 'Labels > DATA POINT LABELS > Show data point labels'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 010727.png',
+            label: 'Print: Line labels',
+            caption: 'Labels > LINE LABELS > Show labels on lines'
+          }
+        ]
       },
       {
         pt: 'Formatação numérica e sufixos (%)',
         en: 'Number formatting > Prefix / Suffix / Decimal places',
-        tip: 'Manter padrão PT-BR (vírgula decimal, ponto de milhar). Em calculadoras com taxas pequenas, usar 5 casas decimais.'
+        tip: 'Manter padrão PT-BR (vírgula decimal, ponto de milhar). Em calculadoras com taxas pequenas, usar 5 casas decimais.',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010847.png',
+            label: 'Ver print: Números',
+            caption: 'Number formatting > Prefix / Suffix / Decimal places'
+          }
+        ]
       },
       {
         pt: 'Legenda',
         en: 'Legend > Legend mode (ou REGION COLOR LEGEND em mapas)',
-        tip: 'Manter rótulos curtos e legíveis no topo; desligar a legenda quando houver apenas uma série.'
+        tip: 'Manter rótulos curtos e legíveis no topo; desligar a legenda quando houver apenas uma série.',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010941.png',
+            label: 'Print: Legenda',
+            caption: 'Legend > Legend mode'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 014558.png',
+            label: 'Print: Legenda mapa',
+            caption: 'Legend > REGION COLOR LEGEND em mapas'
+          }
+        ]
       },
       {
         pt: 'Filtros (trocar All por Todos)',
         en: 'Controls & filters > Include "All" > Name for "All"',
-        tip: 'Sempre traduzir o botão padrão "All" para "Todos" para evitar termos em inglês no gráfico.'
+        tip: 'Sempre traduzir o botão padrão "All" para "Todos" para evitar termos em inglês no gráfico.',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010142.png',
+            label: 'Print: Filtros',
+            caption: 'Controls & filters > Series filter e Control type'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 010342.png',
+            label: 'Print: All → Todos',
+            caption: 'Controls & filters > Name for "All": Todos'
+          }
+        ]
       },
       {
         pt: 'Mapa (degradê, pontos e busca)',
         en: 'Regions layer > Continuous colors > Palette > Custom | Points layer | Search > Search placeholder',
-        tip: 'Traduzir busca para "Pesquisar..." e conferir se o DF não aparece como "Federal District".'
+        tip: 'Traduzir busca para "Pesquisar..." e conferir se o DF não aparece como "Federal District".',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 015051.png',
+            label: 'Print: Degradê',
+            caption: 'Regions layer > Continuous colors > Palette Custom'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 014340.png',
+            label: 'Print: Pontos',
+            caption: 'Points layer > Enabled / Disabled'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 014435.png',
+            label: 'Print: Busca',
+            caption: 'Search > Search placeholder: Pesquisar...'
+          }
+        ]
       },
       {
         pt: 'Linha do tempo (orientação Vertical/Horizontal)',
         en: 'Timeline > Orientation (Vertical / Horizontal)',
-        tip: 'Preferir orientação Vertical para melhor leitura no celular e conferir para não exibir "1 Jan" antes do ano.'
+        tip: 'Preferir orientação Vertical para melhor leitura no celular e conferir para não exibir "1 Jan" antes do ano.',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 015931.png',
+            label: 'Print: Escala/Linha',
+            caption: 'Timeline > Line & Timeline scale'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 020332.png',
+            label: 'Print: Dados',
+            caption: 'Aba Data da Linha do tempo'
+          }
+        ]
       },
       {
         pt: 'Tabela no celular (Mobile view > Blocks)',
         en: 'Mobile view > Blocks e Rows per page',
-        tip: 'Obrigatório ativar "Blocks" no celular e definir "Rows per page = 3" para não quebrar a tela.'
+        tip: 'Obrigatório ativar "Blocks" no celular e definir "Rows per page = 3" para não quebrar a tela.',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 183953.png',
+            label: 'Ver print: Mobile view',
+            caption: 'Mobile view > Blocks e Rows per page = 3'
+          }
+        ]
       },
       {
         pt: 'Teste no celular',
         en: 'Ícone de smartphone (canto superior esquerdo da aba Preview)',
-        tip: 'Verifique sempre cortes de texto ("..."), sobreposição de números e conforto de leitura antes de publicar.'
+        tip: 'Verifique sempre cortes de texto ("..."), sobreposição de números e conforto de leitura antes de publicar.',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 005819.png',
+            label: 'Ver print: Preview celular',
+            caption: 'Ícone de smartphone no canto superior esquerdo do Preview'
+          }
+        ]
       },
       {
         pt: 'Publicação e Embed',
         en: 'Export & publish > Embed on your website | CMS: ícone do Flourish > Flourish Embed > Ok',
-        tip: 'No CMS, clique no ícone do Flourish (asterisco ao lado do Bluesky e Instagram), cole o código e confirme em Ok.'
+        tip: 'No CMS, clique no ícone do Flourish (asterisco ao lado do Bluesky e Instagram), cole o código e confirme em Ok.',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 020050.png',
+            label: 'Ver print: Export & publish',
+            caption: 'Export & publish > Embed on your website'
+          }
+        ]
       }
     ];
 
+    /* 4 Assistentes de IA no Gemini */
     const AI_SKILLS = [
       {
         title: 'Avalia qual gráfico usar',
@@ -800,9 +1043,7 @@
       }
     ];
 
-    /* ========================================================================
-       DADOS DA NOVA CHECKLIST (7 PERGUNTAS + PRINTS DIRETOS DO GITHUB)
-       ======================================================================== */
+    /* 7 Itens da Checklist de Publicação */
     const CHECKLIST_ITEMS = [
       {
         id: 'chk-1',
@@ -947,6 +1188,7 @@
       }
     ];
 
+    /* Guia final de publicação no CMS (quando 7/7 estão concluídos) */
     const CMS_PUBLICATION_GUIDE = {
       steps: [
         'No canto superior direito do Flourish, clique em <span class="menu-tag">Export &amp; publish</span> para publicar ou atualizar o gráfico.',
@@ -964,23 +1206,401 @@
       ]
     };
 
-    /* ========================================================================
-       ESTADO DA APLICAÇÃO
-       ======================================================================== */
-    const STORAGE_KEY_CHECKLIST = 'viva_flourish_checklist_v3';
+    /* 8 Categorias do Guia Visual (Prints) */
+    const VISUAL_GUIDE_CATEGORIES = [
+      'Todas',
+      'Início & Dados',
+      'Títulos & Fontes',
+      'Cores & Rótulos',
+      'Filtros & Legenda',
+      'Mapas',
+      'Tabelas, Linha do Tempo & Calculadora',
+      'Celular & Publicação'
+    ];
 
+    /* 24 Itens do Guia Visual (Prints) */
+    const VISUAL_GUIDE_ITEMS = [
+      {
+        id: 'vg-1',
+        category: 'Início & Dados',
+        question: 'Como duplicar um modelo oficial sem editar o original?',
+        path: 'My projects » Modelos > Duplicate this visualization',
+        explanation: 'Nunca edite o arquivo direto na pasta Modelos. Passe o mouse sobre o template desejado (ou abra o menu de três pontinhos) e clique em Duplicate this visualization para criar sua cópia editável.',
+        keywords: 'duplicar, copiar, template, modelo, original, regra de ouro',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 015615.png',
+            caption: 'Botão Duplicate this visualization na pasta Modelos'
+          }
+        ]
+      },
+      {
+        id: 'vg-2',
+        category: 'Início & Dados',
+        question: 'Onde renomear o gráfico e verificar em qual pasta ele está?',
+        path: 'Topo do editor (Título do projeto / Pasta)',
+        explanation: 'No canto superior esquerdo do editor, clique sobre o nome do projeto para renomeá-lo de forma clara e confira logo abaixo em qual pasta o gráfico está salvo para movê-lo à sua editoria.',
+        keywords: 'renomear, nome, pasta, editoria, organizar, titulo projeto',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 015527.png',
+            caption: 'Título do projeto e pasta no topo do editor'
+          }
+        ]
+      },
+      {
+        id: 'vg-3',
+        category: 'Início & Dados',
+        question: 'Como funciona a aba Dados e como dizer o que cada coluna representa?',
+        path: 'Data > Select columns to visualise',
+        explanation: 'Na aba Data, você cola ou sobe sua tabela à esquerda e usa o painel direito Select columns to visualise para informar a letra da coluna correspondente a cada papel (rótulos, valores, cores e pop-ups).',
+        keywords: 'dados, data, planilha, tabela, coluna, select columns, vincular',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-11 131326.png',
+            caption: 'Aba Data e painel Select columns to visualise'
+          }
+        ]
+      },
+      {
+        id: 'vg-4',
+        category: 'Início & Dados',
+        question: 'Como alternar o tipo de gráfico ou criar grade de pequenos múltiplos?',
+        path: 'Chart type > Grid mode (Single chart / Grid of charts)',
+        explanation: 'No painel Chart type, você troca o tipo de gráfico sem perder os dados e pode mudar Grid mode de Single chart para Grid of charts para dividir várias séries em pequenos gráficos lado a lado.',
+        keywords: 'tipo de grafico, grid, grade, pequenos multiplos, single chart, height mode',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 005934.png',
+            caption: 'Chart type > Grid mode (Single chart / Grid of charts)'
+          }
+        ]
+      },
+      {
+        id: 'vg-5',
+        category: 'Títulos & Fontes',
+        question: 'Onde colocar o título principal e a linha fina (subtítulo)?',
+        path: 'Header > TITLE / SUBTITLE',
+        explanation: 'Na aba Preview, abra o painel Header. Preencha TITLE com um título curto e direto, e use SUBTITLE para informar o recorte temporal e a unidade de medida (ex.: "Em %, entre 2022 e 2026").',
+        keywords: 'titulo, subtitulo, linha fina, header, cabecalho',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 011046.png',
+            caption: 'Painel Header com campos TITLE e SUBTITLE'
+          }
+        ]
+      },
+      {
+        id: 'vg-6',
+        category: 'Títulos & Fontes',
+        question: 'Onde inserir o nome da fonte, o link e trocar "Source:" para "Fonte:"?',
+        path: 'Footer > TEXT > Source name / Source url / Source label',
+        explanation: 'Abra o painel Footer em Preview, preencha Source name e Source url com a origem dos dados e confira o campo Source label para garantir que esteja escrito "Fonte:" em português.',
+        keywords: 'fonte, footer, rodape, source, credito, link, portugues',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 011149.png',
+            caption: 'Footer > Source name, Source url e Source label (Fonte:)'
+          }
+        ]
+      },
+      {
+        id: 'vg-7',
+        category: 'Cores & Rótulos',
+        question: 'Como fixar cores específicas por categoria ou coluna (Custom overrides)?',
+        path: 'Colors > Palette / Custom overrides',
+        explanation: 'No painel Colors, use Custom overrides escrevendo uma linha por categoria no formato "Nome da coluna: #HEXdaCor" (ex.: Outros: #898A8E ou Destaque: #005F6B). O nome precisa ser igual ao da aba Data.',
+        keywords: 'cor, cores, custom overrides, hex, paleta, destaque, outros, media',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010438.png',
+            caption: 'Colors > Palette e campo Custom overrides'
+          }
+        ]
+      },
+      {
+        id: 'vg-8',
+        category: 'Cores & Rótulos',
+        question: 'Como escolher se o gráfico colore por coluna ou por linha?',
+        path: 'Colors > Color mode (By column / By row)',
+        explanation: 'Em Colors > Color mode, selecione By column para manter uma cor única por série numérica ou By row para dar uma cor distinta a cada barra/categoria da planilha.',
+        keywords: 'color mode, by column, by row, cores, barra, coluna, linha',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 012540.png',
+            caption: 'Colors > Color mode: By column vs By row'
+          }
+        ]
+      },
+      {
+        id: 'vg-9',
+        category: 'Cores & Rótulos',
+        question: 'Como exibir os números fixos direto nas barras ou pontos?',
+        path: 'Labels > DATA POINT LABELS > Show data point labels',
+        explanation: 'Ative Show data point labels para fixar os valores direto na visualização. Use All para gráficos enxutos ou Last / Min & Max em séries longas, mantendo Hide overlapping labels ligado.',
+        keywords: 'rotulos, labels, numeros fixos, valores, barras, pontos',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010644.png',
+            caption: 'Labels > DATA POINT LABELS > Show data point labels'
+          }
+        ]
+      },
+      {
+        id: 'vg-10',
+        category: 'Cores & Rótulos',
+        question: 'Como colocar o nome de cada série direto na ponta das linhas?',
+        path: 'Labels > LINE LABELS > Show labels on lines',
+        explanation: 'Em gráficos de linha, ligue Show labels on lines para exibir o nome de cada série diretamente ao final da curva, deixando Overlaps em Spread them out para evitar textos sobrepostos.',
+        keywords: 'linhas, line labels, nome na linha, rotulos de linha',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010727.png',
+            caption: 'Labels > LINE LABELS > Show labels on lines'
+          }
+        ]
+      },
+      {
+        id: 'vg-11',
+        category: 'Cores & Rótulos',
+        question: 'Como colocar "%" (ou "R$") e definir casas decimais nos números?',
+        path: 'Number formatting > Prefix / Suffix / Decimal places',
+        explanation: 'No painel Number formatting, configure Prefix (ex.: R$ ), Suffix (ex.: %) e Decimal places tanto em NUMBER STYLING (LABELS/TIME) quanto em NUMBER STYLING (VALUES).',
+        keywords: 'porcentagem, %, reais, R$, prefixo, sufixo, decimais, formatar numero',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010847.png',
+            caption: 'Number formatting > Prefix, Suffix e Decimal places'
+          }
+        ]
+      },
+      {
+        id: 'vg-12',
+        category: 'Filtros & Legenda',
+        question: 'Como adicionar filtro interativo (menu dropdown, botões ou barra)?',
+        path: 'Controls & filters > Series filter / Control type',
+        explanation: 'Em Controls & filters, ative Series filter (Single select ou Multi select) e escolha o formato visual em Control type: menu suspenso (dropdown), botões ou controle deslizante (slider).',
+        keywords: 'filtro, controls, dropdown, botoes, slider, interativo',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010142.png',
+            caption: 'Controls & filters > Series filter e Control type'
+          }
+        ]
+      },
+      {
+        id: 'vg-13',
+        category: 'Filtros & Legenda',
+        question: 'Como ativar a opção "Todos" no filtro do gráfico?',
+        path: 'Controls & filters > Include "All"',
+        explanation: 'Dentro de Controls & filters, ative a chave Include "All" para criar um botão que permite ao leitor visualizar todas as séries juntas novamente após filtrar.',
+        keywords: 'include all, filtro, todos, botao todos, controls',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010219.png',
+            caption: 'Chave Include "All" ativada em Controls & filters'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 010300.png',
+            caption: 'Campo Name for "All" exibido logo ao lado de Include "All"'
+          }
+        ]
+      },
+      {
+        id: 'vg-14',
+        category: 'Filtros & Legenda',
+        question: 'Como traduzir o botão "All" do filtro para "Todos"?',
+        path: 'Controls & filters > Include "All" > Name for "All"',
+        explanation: 'Sempre que ligar Include "All", substitua imediatamente o texto padrão em inglês "All" no campo Name for "All" por "Todos" (ou "Todas"), evitando palavras em inglês na matéria.',
+        keywords: 'all, todos, traduzir, portugues, ingles, name for all',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010342.png',
+            caption: 'Campo Name for "All" traduzido para "Todos"'
+          }
+        ]
+      },
+      {
+        id: 'vg-15',
+        category: 'Filtros & Legenda',
+        question: 'Como ligar, desligar ou alinhar a legenda do gráfico?',
+        path: 'Legend > Legend mode / Alignment',
+        explanation: 'Em Legend, alterne Legend mode entre Auto, On e Off (desligue se houver apenas uma série ou se os nomes já estiverem nas pontas das linhas) e ajuste o alinhamento no topo do gráfico.',
+        keywords: 'legenda, legend, alinhamento, desligar legenda, barras empilhadas',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 010941.png',
+            caption: 'Painel Legend com Legend mode e Alignment'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 170050.png',
+            caption: 'Exemplo de gráfico com legenda limpa aplicada'
+          }
+        ]
+      },
+      {
+        id: 'vg-16',
+        category: 'Mapas',
+        question: 'Como preencher os dados dos estados (e evitar "Federal District") no mapa?',
+        path: 'Data > Regions (ID, Name, Color by)',
+        explanation: 'Na aba Data > Regions, mantenha os nomes dos estados em português (conferindo se está "Distrito Federal" e não "Federal District") e ligue no painel lateral: ID na coluna do nome, Name na sigla e Color by no valor.',
+        keywords: 'mapa, brasil, estados, uf, distrito federal, federal district, regions',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 014816.png',
+            caption: 'Aba Data > Regions com colunas e mapeamento lateral'
+          }
+        ]
+      },
+      {
+        id: 'vg-17',
+        category: 'Mapas',
+        question: 'Como ajustar o degradê de cores nos estados do mapa?',
+        path: 'Regions layer > Continuous colors > Palette > Custom',
+        explanation: 'Em Regions layer > Continuous colors, selecione Palette: Custom e defina a cor mais clara em Minimum color e a mais intensa em Maximum color (ex.: degradê até #005F6B).',
+        keywords: 'mapa, degrade, cor, continuous colors, regions layer, palette custom',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 015051.png',
+            caption: 'Regions layer > Continuous colors > Palette Custom'
+          }
+        ]
+      },
+      {
+        id: 'vg-18',
+        category: 'Mapas',
+        question: 'Como ativar/desativar pontos de cidades e preencher latitude/longitude?',
+        path: 'Points layer > Enabled / Disabled | Data > Points',
+        explanation: 'Em Points layer, escolha Enabled para exibir bolinhas sobre cidades (ou Disabled se o mapa usar só estados). Quando ativado, preencha a aba Data > Points com City, Longitude, Latitude e valor.',
+        keywords: 'mapa, pontos, cidades, bolinhas, points layer, latitude, longitude',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 014340.png',
+            caption: 'Points layer > Enabled / Disabled e tipo de símbolo'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 014803.png',
+            caption: 'Aba Data > Points com City, Longitude, Latitude e valor'
+          }
+        ]
+      },
+      {
+        id: 'vg-19',
+        category: 'Mapas',
+        question: 'Como ativar a barra de busca em português e a legenda de cores do mapa?',
+        path: 'Search > Search placeholder: Pesquisar... | Legend > REGION COLOR LEGEND',
+        explanation: 'Em Search, ligue Search enabled e troque Search placeholder para "Pesquisar...". Em Legend, controle a barra de escala de cores do mapa na seção REGION COLOR LEGEND (Enabled / Disabled).',
+        keywords: 'mapa, busca, pesquisar, search, placeholder, legenda mapa, region color legend',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 014435.png',
+            caption: 'Search > Search enabled e Search placeholder: Pesquisar...'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 014558.png',
+            caption: 'Legend > REGION COLOR LEGEND (Enabled / Disabled)'
+          }
+        ]
+      },
+      {
+        id: 'vg-20',
+        category: 'Tabelas, Linha do Tempo & Calculadora',
+        question: 'Como configurar a tabela interativa para não quebrar no celular?',
+        path: 'Mobile view > Blocks e Rows per page = 3',
+        explanation: 'Na aba Preview da tabela, abra Mobile view, selecione Blocks (transformando cada linha em cartão legível) e defina Rows per page = 3 para evitar rolagem lateral ou altura excessiva no smartphone.',
+        keywords: 'tabela, celular, mobile view, blocks, rows per page, responsivo',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 183953.png',
+            caption: 'Mobile view > Blocks e Rows per page = 3'
+          }
+        ]
+      },
+      {
+        id: 'vg-21',
+        category: 'Tabelas, Linha do Tempo & Calculadora',
+        question: 'Como estruturar datas, eventos e escala na Linha do tempo?',
+        path: 'Data (Linha do tempo) | Timeline > Line & Timeline scale',
+        explanation: 'Preencha datas, títulos e descrições na aba Data. No Preview, ajuste o traço da linha e escolha em TIMELINE SCALE entre Equally spaced (espaço igual) ou Time scale (proporcional ao tempo).',
+        keywords: 'linha do tempo, timeline, datas, eventos, escala, equally spaced, time scale',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 020332.png',
+            caption: 'Aba Data da Linha do tempo'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 015931.png',
+            caption: 'Timeline > Line e seletor TIMELINE SCALE'
+          }
+        ]
+      },
+      {
+        id: 'vg-22',
+        category: 'Tabelas, Linha do Tempo & Calculadora',
+        question: 'Onde preencher perguntas, fórmulas (Variables) e HTML do resultado na Calculadora?',
+        path: 'Data > Questions | Preview > Result > Variables / Result',
+        explanation: 'Cadastre as perguntas do leitor em Data > Questions (elas geram variáveis q_1, q_2, q_3...). No Preview > Result, escreva as fórmulas em Variables e monte o texto exibido ao leitor em Result usando {{variavel}}.',
+        keywords: 'calculadora, calculator, questions, variables, result, formulas, html, simulador',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 020600.png',
+            caption: 'Aba Data > Questions da Calculadora'
+          },
+          {
+            file: 'Captura de tela 2026-11-16 020637.png',
+            caption: 'Preview > Result com blocos Variables e Result'
+          }
+        ]
+      },
+      {
+        id: 'vg-23',
+        category: 'Celular & Publicação',
+        question: 'Onde testar como o gráfico aparece no celular antes de publicar?',
+        path: 'Preview > Ícone de smartphone (canto superior esquerdo)',
+        explanation: 'No canto superior esquerdo da aba Preview, clique no ícone de smartphone para simular a tela de celular e conferir cortes de texto ("..."), sobreposição de rótulos e legibilidade.',
+        keywords: 'celular, smartphone, mobile, testar, preview, responsivo',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 005819.png',
+            caption: 'Ícone de smartphone no canto superior esquerdo do Preview'
+          }
+        ]
+      },
+      {
+        id: 'vg-24',
+        category: 'Celular & Publicação',
+        question: 'Onde publicar, atualizar e copiar o código Embed para o CMS?',
+        path: 'Export & publish > Published / Embed on your website',
+        explanation: 'Clique no botão verde Export & publish no topo direito para publicar e copie o código em Embed on your website para colar no CMS. Após qualquer edição futura, clique no ícone de atualizar (↻) para republicar sem trocar o código na matéria.',
+        keywords: 'publicar, exportar, embed, codigo, atualizar, republicar, cms, export',
+        prints: [
+          {
+            file: 'Captura de tela 2026-11-16 020050.png',
+            caption: 'Export & publish > Published e Embed on your website'
+          }
+        ]
+      }
+    ];
+
+    /* ========================================================================
+       2. ESTADO CENTRAL DA APLICAÇÃO
+       ======================================================================== */
     const state = {
-      activeTab: 'templates', // "Templates" ativa por padrão no Hub final
+      activeTab: 'templates',               // Aba 1 ("Templates") ativa por padrão
       passwordVisible: false,
       dictQuery: '',
       openPopoverId: null,
-      checklist: {},          // { 'chk-1': true, ... }
-      expandedTutorials: {},  // { 'chk-1': true, ... }
-      pendingGuideOpen: false
+      checklist: {},                        // { 'chk-1': true, ... }
+      expandedTutorials: {},                // { 'chk-1': true, ... }
+      pendingGuideOpen: false,
+      visualGuideQuery: '',
+      visualGuideCategory: 'Todas',
+      visualGuideExpanded: new Set(['vg-1']), // 1º item aberto por padrão
+      visualGuidePreSearchExpanded: null
     };
 
     /* ========================================================================
-       UTILITÁRIOS: URL GITHUB, ESCAPE, NORMALIZAÇÃO, CÓPIA E TOASTS
+       3. UTILITÁRIOS GLOBAIS (URL GITHUB, ESCAPE, BUSCA, CÓPIA, STORAGE, TOAST)
        ======================================================================== */
     function getGithubPrintUrl(filename) {
       return `${PORTAL_DATA.githubRawBase}${encodeURIComponent(filename)}`;
@@ -1026,8 +1646,8 @@
     }
 
     /**
-     * Copia texto usando document.execCommand('copy') com fallback para Clipboard API,
-     * garantindo funcionamento confiável mesmo dentro de iframes.
+     * Copia texto usando textarea temporária + document.execCommand('copy'),
+     * com fallback para navigator.clipboard.writeText.
      */
     function copyToClipboard(text, successMessage) {
       const textarea = document.createElement('textarea');
@@ -1078,8 +1698,83 @@
       }
     }
 
+    /**
+     * Anexa handlers de erro seguros às miniaturas de prints inline.
+     */
+    function attachImageFallbackHandlers(containerEl) {
+      if (!containerEl) return;
+      containerEl.querySelectorAll('img.print-thumb').forEach((img) => {
+        img.addEventListener('error', () => {
+          img.classList.add('hidden');
+          const btn = img.closest('.btn-zoom-print');
+          if (!btn) return;
+          const fallback = btn.querySelector('.print-fallback');
+          const pill = btn.querySelector('.print-zoom-pill');
+          if (fallback) fallback.classList.remove('hidden');
+          if (pill) pill.classList.add('hidden');
+          btn.disabled = true;
+          btn.classList.remove('cursor-zoom-in');
+          btn.removeAttribute('title');
+        });
+      });
+    }
+
     /* ========================================================================
-       ÍCONES SVG GRANDES DOS 9 TEMPLATES
+       4. MODAL LIGHTBOX GLOBAL (#zoomModal)
+       ======================================================================== */
+    function openZoomModal(src, caption, filename) {
+      const modal = document.getElementById('zoomModal');
+      const img = document.getElementById('zoomModalImg');
+      const fallback = document.getElementById('zoomModalFallback');
+      const fallbackFile = document.getElementById('zoomModalFallbackFile');
+      const captionEl = document.getElementById('zoomModalCaption');
+      const rawLink = document.getElementById('zoomModalRawLink');
+
+      fallback.classList.add('hidden');
+      fallbackFile.textContent = filename || '';
+      img.classList.remove('hidden');
+      img.src = src;
+      img.alt = caption || 'Print ampliado';
+      captionEl.textContent = caption || 'Print ampliado';
+      rawLink.href = src;
+
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+      document.getElementById('btnCloseZoom').focus();
+    }
+
+    function closeZoomModal() {
+      const modal = document.getElementById('zoomModal');
+      const img = document.getElementById('zoomModalImg');
+      const fallback = document.getElementById('zoomModalFallback');
+      if (modal.classList.contains('hidden')) return;
+      modal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+      fallback.classList.add('hidden');
+      img.classList.remove('hidden');
+      img.src = '';
+    }
+
+    function initZoomModal() {
+      const img = document.getElementById('zoomModalImg');
+      const fallback = document.getElementById('zoomModalFallback');
+
+      img.addEventListener('error', () => {
+        if (!img.getAttribute('src')) return;
+        img.classList.add('hidden');
+        fallback.classList.remove('hidden');
+      });
+
+      document.getElementById('btnCloseZoom').addEventListener('click', closeZoomModal);
+      document.getElementById('zoomModal').addEventListener('click', (e) => {
+        if (e.target.id === 'zoomModal') {
+          closeZoomModal();
+        }
+      });
+    }
+
+    /* ========================================================================
+       5. ÍCONES SVG GRANDES DOS 9 TEMPLATES
        ======================================================================== */
     function getTemplateIconSvg(id) {
       const icons = {
@@ -1097,7 +1792,7 @@
     }
 
     /* ========================================================================
-       1. TOPO E CONTA COMPARTILHADA
+       6. TOPO — CONTA COMPARTILHADA
        ======================================================================== */
     function initAccountSection() {
       const btnCopyLogin = document.getElementById('btnCopyFlourishLogin');
@@ -1143,7 +1838,7 @@
     }
 
     /* ========================================================================
-       2. NAVEGAÇÃO POR ABAS
+       7. NAVEGAÇÃO POR ABAS (5 ABAS)
        ======================================================================== */
     function setActiveTab(tabId) {
       state.activeTab = tabId;
@@ -1181,12 +1876,12 @@
         });
       });
 
-      // Inicia na aba "Templates" por padrão
+      // Aba 1 ("Templates") ativa por padrão
       setActiveTab('templates');
     }
 
     /* ========================================================================
-       3. ABA 1 — TEMPLATES OFICIAIS (ENXUTA + POPOVER "?")
+       8. ABA 1 — TEMPLATES OFICIAIS (ENXUTA + POPOVER "?")
        ======================================================================== */
     function closeAllPopovers() {
       state.openPopoverId = null;
@@ -1302,14 +1997,12 @@
         });
       });
 
-      // Fechar popover ao clicar fora
       document.addEventListener('click', (e) => {
         if (!e.target.closest('.popover-wrapper')) {
           closeAllPopovers();
         }
       });
 
-      // Ações dos botões Abrir modelo e Copiar link
       grid.querySelectorAll('.btn-open-template').forEach((link) => {
         link.addEventListener('click', () => {
           showToast(
@@ -1328,7 +2021,7 @@
     }
 
     /* ========================================================================
-       4. ABA 2 — MANUAL, CORES E DICIONÁRIO DE MENUS
+       9. ABA 2 — MANUAL, PALETA, CUSTOM OVERRIDES E DICIONÁRIO DE MENUS
        ======================================================================== */
     function renderPalette() {
       const grid = document.getElementById('paletteGrid');
@@ -1394,21 +2087,48 @@
         return;
       }
 
-      tbody.innerHTML = filtered.map((item) => `
-        <tr class="hover:bg-slate-50 transition">
-          <td class="py-3.5 px-4 font-bold text-viva-ink align-top">
-            ${escapeHtml(item.pt)}
-          </td>
-          <td class="py-3.5 px-4 align-top">
-            <code class="inline-block px-2 py-1 rounded bg-viva-soft text-viva-dark font-mono text-xs font-semibold break-words">
-              ${escapeHtml(item.en)}
-            </code>
-          </td>
-          <td class="py-3.5 px-4 text-slate-600 align-top leading-relaxed">
-            ${escapeHtml(item.tip)}
-          </td>
-        </tr>
-      `).join('');
+      tbody.innerHTML = filtered.map((item) => {
+        const printsHtml = Array.isArray(item.prints) && item.prints.length > 0
+          ? `
+            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+              ${item.prints.map((print) => `
+                <button
+                  type="button"
+                  data-zoom-src="${escapeHtml(getGithubPrintUrl(print.file))}"
+                  data-zoom-caption="${escapeHtml(print.caption)}"
+                  data-zoom-file="${escapeHtml(print.file)}"
+                  class="btn-dict-print inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-viva-soft/75 hover:bg-viva-primary text-viva-dark hover:text-white border border-viva-primary/25 text-xs font-bold transition cursor-pointer"
+                  title="Abrir print: ${escapeHtml(print.caption)}"
+                >
+                  <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                  </svg>
+                  <span>${escapeHtml(print.label)}</span>
+                </button>
+              `).join('')}
+            </div>
+          `
+          : '';
+
+        return `
+          <tr class="hover:bg-slate-50 transition">
+            <td class="py-3.5 px-4 font-bold text-viva-ink align-top">
+              ${escapeHtml(item.pt)}
+            </td>
+            <td class="py-3.5 px-4 align-top">
+              <code class="inline-block px-2 py-1 rounded bg-viva-soft text-viva-dark font-mono text-xs font-semibold break-words">
+                ${escapeHtml(item.en)}
+              </code>
+              ${printsHtml}
+            </td>
+            <td class="py-3.5 px-4 text-slate-600 align-top leading-relaxed">
+              ${escapeHtml(item.tip)}
+            </td>
+          </tr>
+        `;
+      }).join('');
     }
 
     function initManualTab() {
@@ -1424,6 +2144,18 @@
 
       const searchInput = document.getElementById('dictSearchInput');
       const clearBtn = document.getElementById('dictSearchClear');
+      const dictTableBody = document.getElementById('dictTableBody');
+
+      // Delegação para abrir prints do Dicionário no Lightbox global (#zoomModal)
+      dictTableBody.addEventListener('click', (e) => {
+        const printBtn = e.target.closest('.btn-dict-print');
+        if (!printBtn) return;
+        openZoomModal(
+          printBtn.dataset.zoomSrc,
+          printBtn.dataset.zoomCaption,
+          printBtn.dataset.zoomFile
+        );
+      });
 
       searchInput.addEventListener('input', (e) => {
         state.dictQuery = e.target.value;
@@ -1450,7 +2182,7 @@
     }
 
     /* ========================================================================
-       5. ABA 3 — ASSISTENTES DE IA (GRID 2x2 LIMPO E DIRETO)
+       10. ABA 3 — ASSISTENTES DE IA (GRID 2x2 LIMPO)
        ======================================================================== */
     function initSkillsTab() {
       const grid = document.getElementById('skillsGrid');
@@ -1495,7 +2227,7 @@
     }
 
     /* ========================================================================
-       6. ABA 4 — NOVA CHECKLIST DE PUBLICAÇÃO (7 PERGUNTAS + PRINTS GITHUB)
+       11. ABA 4 — CHECKLIST DE PUBLICAÇÃO (7 PERGUNTAS + PRINTS GITHUB)
        ======================================================================== */
     function getChecklistStats() {
       const total = CHECKLIST_ITEMS.length;
@@ -1586,14 +2318,13 @@
     }
 
     /**
-     * Exibe os prints diretamente dentro do tutorial (sem exigir um segundo clique).
-     * Clicar na imagem abre o lightbox de zoom opcional.
+     * Renderiza os prints inline (reutilizado pela Checklist e pelo Guia Visual).
      */
-    function buildInlinePrintsHtml(prints) {
+    function buildInlinePrintsHtml(prints, showHeaderLabel = true) {
       if (!prints || prints.length === 0) return '';
 
       const gridCols = prints.length === 1
-        ? 'grid-cols-1 max-w-xl'
+        ? 'grid-cols-1 max-w-2xl'
         : prints.length === 2
           ? 'grid-cols-1 sm:grid-cols-2'
           : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
@@ -1606,14 +2337,15 @@
               type="button"
               data-zoom-src="${escapeHtml(url)}"
               data-zoom-caption="${escapeHtml(print.caption)}"
-              class="btn-zoom-print relative block w-full bg-slate-100 overflow-hidden text-left focus:outline-none focus:ring-2 focus:ring-viva-primary cursor-pointer"
+              data-zoom-file="${escapeHtml(print.file)}"
+              class="btn-zoom-print relative block w-full bg-slate-100 overflow-hidden text-left focus:outline-none focus:ring-2 focus:ring-viva-primary cursor-zoom-in"
               title="Clique para ampliar o print"
             >
               <img
                 src="${escapeHtml(url)}"
                 alt="${escapeHtml(print.caption)}"
                 loading="lazy"
-                class="print-thumb w-full h-auto max-h-64 object-contain bg-white transition duration-200 group-hover:scale-[1.01]"
+                class="print-thumb w-full h-auto max-h-72 object-contain bg-white transition duration-200 group-hover:scale-[1.01]"
               />
               <!-- Fallback amigável caso a imagem falhe ao carregar -->
               <div class="print-fallback hidden p-5 text-center bg-slate-50 text-slate-600 space-y-1">
@@ -1644,9 +2376,11 @@
 
       return `
         <div class="space-y-2 pt-1">
-          <span class="block text-[11px] font-bold uppercase tracking-wider text-viva-gray">
-            Prints de referência (clique na imagem para ampliar)
-          </span>
+          ${showHeaderLabel ? `
+            <span class="block text-[11px] font-bold uppercase tracking-wider text-viva-gray">
+              Prints de referência (clique na imagem para ampliar)
+            </span>
+          ` : ''}
           <div class="grid ${gridCols} gap-3">
             ${cards}
           </div>
@@ -1672,26 +2406,8 @@
         <ol class="space-y-2.5">${stepsHtml}</ol>
         ${item.showPaletteChips ? buildChecklistPaletteChipsHtml() : ''}
         ${buildChecklistLinksHtml(item.links)}
-        ${buildInlinePrintsHtml(item.prints)}
+        ${buildInlinePrintsHtml(item.prints, true)}
       `;
-    }
-
-    function attachImageFallbackHandlers(containerEl) {
-      if (!containerEl) return;
-      containerEl.querySelectorAll('img.print-thumb').forEach((img) => {
-        img.addEventListener('error', () => {
-          img.classList.add('hidden');
-          const btn = img.closest('.btn-zoom-print');
-          if (!btn) return;
-          const fallback = btn.querySelector('.print-fallback');
-          const pill = btn.querySelector('.print-zoom-pill');
-          if (fallback) fallback.classList.remove('hidden');
-          if (pill) pill.classList.add('hidden');
-          btn.disabled = true;
-          btn.classList.remove('cursor-pointer');
-          btn.removeAttribute('title');
-        });
-      });
     }
 
     function updateChecklistProgressUI() {
@@ -1719,7 +2435,6 @@
         doneBadge.classList.remove('inline-flex');
       }
 
-      // Botão principal abaixo da lista
       const btn = document.getElementById('btnShowPendingGuide');
       const btnLabel = document.getElementById('btnShowPendingLabel');
       const btnIcon = document.getElementById('btnShowPendingIcon');
@@ -1834,7 +2549,7 @@
       section.classList.remove('hidden');
       const { pendingItems } = getChecklistStats();
 
-      // Caso 1: Todos os 7 itens marcados -> Card verde de sucesso + publicação no CMS
+      // Caso 1: Todos os 7 itens concluídos -> Guia final de publicação no CMS
       if (pendingItems.length === 0) {
         header.className = 'px-5 py-4 bg-emerald-50 border-b border-emerald-200 flex flex-wrap items-center justify-between gap-3';
         titleEl.className = 'text-base sm:text-lg font-black text-emerald-900';
@@ -1858,14 +2573,14 @@
           <div class="bg-emerald-50/50 border border-emerald-200 rounded-xl p-4 sm:p-5 space-y-4">
             <ol class="space-y-3">${stepsHtml}</ol>
             ${buildChecklistLinksHtml(CMS_PUBLICATION_GUIDE.links)}
-            ${buildInlinePrintsHtml(CMS_PUBLICATION_GUIDE.prints)}
+            ${buildInlinePrintsHtml(CMS_PUBLICATION_GUIDE.prints, true)}
           </div>
         `;
         attachImageFallbackHandlers(bodyEl);
         return;
       }
 
-      // Caso 2: Há itens pendentes -> Passo a passo apenas dos não marcados
+      // Caso 2: Há itens pendentes -> Passo a passo dos itens desmarcados
       header.className = 'px-5 py-4 bg-viva-soft/80 border-b border-viva-light flex flex-wrap items-center justify-between gap-3';
       titleEl.className = 'text-base sm:text-lg font-black text-viva-dark';
       titleEl.textContent = 'Passo a passo do que falta fazer';
@@ -1912,34 +2627,6 @@
       renderPendingGuide();
     }
 
-    /* ========================================================================
-       7. MODAL LIGHTBOX GLOBAL (ZOOM DOS PRINTS)
-       ======================================================================== */
-    function openZoomModal(src, caption) {
-      const modal = document.getElementById('zoomModal');
-      const img = document.getElementById('zoomModalImg');
-      const captionEl = document.getElementById('zoomModalCaption');
-      const rawLink = document.getElementById('zoomModalRawLink');
-
-      img.src = src;
-      img.alt = caption || 'Print ampliado';
-      captionEl.textContent = caption || 'Print ampliado';
-      rawLink.href = src;
-
-      modal.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-      document.getElementById('btnCloseZoom').focus();
-    }
-
-    function closeZoomModal() {
-      const modal = document.getElementById('zoomModal');
-      const img = document.getElementById('zoomModalImg');
-      if (modal.classList.contains('hidden')) return;
-      modal.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-      img.src = '';
-    }
-
     function initChecklistTab() {
       state.checklist = readStorage(STORAGE_KEY_CHECKLIST, {});
       renderChecklistAll();
@@ -1956,7 +2643,7 @@
         renderChecklistAll();
       });
 
-      // Delegação: abrir tutorial, copiar HEX da checklist, zoom de prints, marcar como feito
+      // Delegação: abrir tutorial, copiar HEX da checklist, zoom de prints e marcar como feito
       checklistPanel.addEventListener('click', (e) => {
         const toggleBtn = e.target.closest('.btn-toggle-tutorial');
         if (toggleBtn) {
@@ -1977,7 +2664,11 @@
 
         const zoomBtn = e.target.closest('.btn-zoom-print');
         if (zoomBtn && !zoomBtn.disabled) {
-          openZoomModal(zoomBtn.dataset.zoomSrc, zoomBtn.dataset.zoomCaption);
+          openZoomModal(
+            zoomBtn.dataset.zoomSrc,
+            zoomBtn.dataset.zoomCaption,
+            zoomBtn.dataset.zoomFile
+          );
           return;
         }
 
@@ -1991,7 +2682,6 @@
         }
       });
 
-      // Botão "Limpar marcações"
       document.getElementById('btnClearChecklist').addEventListener('click', () => {
         state.checklist = {};
         writeStorage(STORAGE_KEY_CHECKLIST, state.checklist);
@@ -1999,7 +2689,6 @@
         showToast('Checklist limpa para um novo gráfico!', 'info');
       });
 
-      // Botão principal abaixo da lista
       document.getElementById('btnShowPendingGuide').addEventListener('click', () => {
         state.pendingGuideOpen = true;
         renderPendingGuide();
@@ -2009,23 +2698,340 @@
         });
       });
 
-      // Botão fechar painel inferior
       document.getElementById('btnClosePendingGuide').addEventListener('click', () => {
         state.pendingGuideOpen = false;
         renderPendingGuide();
       });
+    }
 
-      // Eventos do modal Lightbox
-      document.getElementById('btnCloseZoom').addEventListener('click', closeZoomModal);
-      document.getElementById('zoomModal').addEventListener('click', (e) => {
-        if (e.target.id === 'zoomModal') {
-          closeZoomModal();
+    /* ========================================================================
+       12. ABA 5 — GUIA VISUAL (PRINTS): 24 DÚVIDAS COM BUSCA E CATEGORIAS
+       ======================================================================== */
+    function getVisualGuideCategoryCount(category) {
+      if (category === 'Todas') return VISUAL_GUIDE_ITEMS.length;
+      return VISUAL_GUIDE_ITEMS.filter((item) => item.category === category).length;
+    }
+
+    function getFilteredVisualGuideItems() {
+      const normalizedQuery = normalizeText(state.visualGuideQuery.trim());
+      const tokens = normalizedQuery ? normalizedQuery.split(/\s+/).filter(Boolean) : [];
+
+      return VISUAL_GUIDE_ITEMS.filter((item) => {
+        const matchesCategory =
+          state.visualGuideCategory === 'Todas' || item.category === state.visualGuideCategory;
+        if (!matchesCategory) return false;
+        if (tokens.length === 0) return true;
+
+        const searchable = normalizeText(
+          `${item.question} ${item.keywords} ${item.path} ${item.explanation} ${item.category}`
+        );
+        return tokens.every((token) => searchable.includes(token));
+      });
+    }
+
+    function renderVisualGuideCategoryChips() {
+      const container = document.getElementById('visualGuideCategoryChips');
+      if (!container) return;
+
+      container.innerHTML = VISUAL_GUIDE_CATEGORIES.map((category) => {
+        const isActive = state.visualGuideCategory === category;
+        const count = getVisualGuideCategoryCount(category);
+
+        return `
+          <button
+            type="button"
+            data-vg-category="${escapeHtml(category)}"
+            aria-pressed="${isActive ? 'true' : 'false'}"
+            class="btn-vg-category inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs sm:text-sm font-bold border transition ${
+              isActive
+                ? 'bg-viva-primary text-white border-viva-primary shadow-sm'
+                : 'bg-slate-50 hover:bg-viva-soft text-slate-700 hover:text-viva-dark border-viva-light hover:border-viva-primary/60'
+            }"
+          >
+            <span>${escapeHtml(category)}</span>
+            <span class="px-1.5 py-0.5 rounded-full text-[11px] font-mono leading-none ${
+              isActive ? 'bg-white/20 text-white' : 'bg-white text-viva-gray border border-slate-200'
+            }">
+              ${count}
+            </span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function updateVisualGuideControls(filteredItems) {
+      const counterEl = document.getElementById('visualGuideResultsCounter');
+      const autoHintEl = document.getElementById('visualGuideAutoOpenHint');
+      const toggleAllBtn = document.getElementById('btnVisualGuideToggleAll');
+      const toggleAllLabel = document.getElementById('btnVisualGuideToggleAllLabel');
+
+      const total = VISUAL_GUIDE_ITEMS.length;
+      const shown = filteredItems.length;
+      const hasSearch = state.visualGuideQuery.trim().length > 0;
+
+      counterEl.textContent = `Exibindo ${shown} de ${total} dúvidas`;
+
+      if (hasSearch && shown > 0) {
+        autoHintEl.classList.remove('hidden');
+      } else {
+        autoHintEl.classList.add('hidden');
+      }
+
+      if (shown === 0) {
+        toggleAllBtn.disabled = true;
+        toggleAllBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        toggleAllLabel.textContent = 'Expandir tudo';
+        return;
+      }
+
+      toggleAllBtn.disabled = false;
+      toggleAllBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+
+      const allOpen = filteredItems.every((item) => state.visualGuideExpanded.has(item.id));
+      toggleAllLabel.textContent = allOpen ? 'Recolher tudo' : 'Expandir tudo';
+    }
+
+    function renderVisualGuideList() {
+      const listEl = document.getElementById('visualGuideAccordionList');
+      const filtered = getFilteredVisualGuideItems();
+
+      updateVisualGuideControls(filtered);
+
+      if (filtered.length === 0) {
+        listEl.innerHTML = `
+          <div class="bg-white border border-viva-light rounded-xl p-8 sm:p-10 text-center space-y-3 shadow-sm animate-fade-slide">
+            <div class="w-12 h-12 rounded-full bg-viva-soft text-viva-primary mx-auto flex items-center justify-center">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <h3 class="text-base font-bold text-viva-ink">
+              Nenhuma dúvida encontrada para "${escapeHtml(state.visualGuideQuery.trim())}"
+            </h3>
+            <p class="text-sm text-slate-600 max-w-md mx-auto">
+              Tente buscar por uma palavra mais direta (como "fonte", "cor", "mapa", "tabela" ou "celular") ou limpe os filtros.
+            </p>
+            <div class="pt-1">
+              <button
+                type="button"
+                id="btnVisualGuideResetEmpty"
+                class="px-4 py-2 rounded-lg bg-viva-primary hover:bg-viva-dark text-white text-sm font-bold transition"
+              >
+                Limpar busca e filtros
+              </button>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      listEl.innerHTML = filtered.map((item) => {
+        const isOpen = state.visualGuideExpanded.has(item.id);
+        const printCount = item.prints.length;
+        const printLabel = printCount === 1 ? '1 print' : `${printCount} prints`;
+
+        return `
+          <article
+            class="bg-white border rounded-xl shadow-sm transition ${
+              isOpen
+                ? 'border-viva-primary/70 ring-1 ring-viva-primary/15'
+                : 'border-viva-light hover:border-viva-primary/60'
+            }"
+          >
+            <!-- Cabeçalho clicável do acordeão -->
+            <button
+              type="button"
+              data-vg-toggle-id="${escapeHtml(item.id)}"
+              aria-expanded="${isOpen ? 'true' : 'false'}"
+              aria-controls="vg-panel-${escapeHtml(item.id)}"
+              class="btn-vg-toggle w-full text-left p-4 sm:p-5 flex items-start justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-viva-primary rounded-xl transition"
+            >
+              <div class="min-w-0 flex-1 space-y-2">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-viva-soft text-viva-dark">
+                    ${escapeHtml(item.category)}
+                  </span>
+                  <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+                    <svg class="w-3 h-3 text-viva-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                    ${escapeHtml(printLabel)}
+                  </span>
+                </div>
+
+                <h3 class="text-base sm:text-lg font-bold text-viva-ink leading-snug">
+                  ${escapeHtml(item.question)}
+                </h3>
+
+                <div>
+                  <span class="menu-tag break-words">${escapeHtml(item.path)}</span>
+                </div>
+              </div>
+
+              <!-- Seta indicativa -->
+              <span
+                class="w-9 h-9 rounded-lg border flex items-center justify-center shrink-0 mt-1 transition ${
+                  isOpen
+                    ? 'bg-viva-primary text-white border-viva-primary'
+                    : 'bg-slate-50 text-viva-primary border-viva-light'
+                }"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+
+            <!-- Corpo expansível com explicação concisa + prints clicáveis -->
+            <div
+              id="vg-panel-${escapeHtml(item.id)}"
+              class="${isOpen ? 'block' : 'hidden'} px-4 sm:px-5 pb-5 pt-4 border-t border-slate-200 bg-slate-50/75 rounded-b-xl space-y-4 animate-fade-slide"
+            >
+              <p class="text-sm sm:text-[15px] text-slate-700 leading-relaxed max-w-4xl">
+                ${escapeHtml(item.explanation)}
+              </p>
+
+              ${buildInlinePrintsHtml(item.prints, false)}
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      attachImageFallbackHandlers(listEl);
+    }
+
+    function syncVisualGuideClearButton() {
+      const clearBtn = document.getElementById('btnVisualGuideClearSearch');
+      if (state.visualGuideQuery.length > 0) {
+        clearBtn.classList.remove('hidden');
+        clearBtn.classList.add('inline-flex');
+      } else {
+        clearBtn.classList.add('hidden');
+        clearBtn.classList.remove('inline-flex');
+      }
+    }
+
+    function handleVisualGuideSearch(newValue) {
+      const prevTrimmed = state.visualGuideQuery.trim();
+      const nextTrimmed = newValue.trim();
+
+      if (!prevTrimmed && nextTrimmed) {
+        state.visualGuidePreSearchExpanded = new Set(state.visualGuideExpanded);
+      }
+
+      state.visualGuideQuery = newValue;
+      syncVisualGuideClearButton();
+
+      if (nextTrimmed) {
+        const matches = getFilteredVisualGuideItems();
+        state.visualGuideExpanded = new Set(matches.map((item) => item.id));
+      } else if (state.visualGuidePreSearchExpanded) {
+        state.visualGuideExpanded = new Set(state.visualGuidePreSearchExpanded);
+        state.visualGuidePreSearchExpanded = null;
+      }
+
+      renderVisualGuideList();
+    }
+
+    function initVisualGuideTab() {
+      const panel = document.getElementById('panel-guia-visual');
+      const searchInput = document.getElementById('visualGuideSearchInput');
+      const clearBtn = document.getElementById('btnVisualGuideClearSearch');
+      const toggleAllBtn = document.getElementById('btnVisualGuideToggleAll');
+      const totalPrintsBadge = document.getElementById('visualGuideTotalPrints');
+
+      const totalPrints = VISUAL_GUIDE_ITEMS.reduce((acc, item) => acc + item.prints.length, 0);
+      if (totalPrintsBadge) {
+        totalPrintsBadge.textContent = `${totalPrints} prints`;
+      }
+
+      renderVisualGuideCategoryChips();
+      renderVisualGuideList();
+
+      searchInput.addEventListener('input', (e) => {
+        handleVisualGuideSearch(e.target.value);
+      });
+
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        handleVisualGuideSearch('');
+        searchInput.focus();
+      });
+
+      toggleAllBtn.addEventListener('click', () => {
+        const filtered = getFilteredVisualGuideItems();
+        if (filtered.length === 0) return;
+
+        const allOpen = filtered.every((item) => state.visualGuideExpanded.has(item.id));
+        if (allOpen) {
+          filtered.forEach((item) => state.visualGuideExpanded.delete(item.id));
+        } else {
+          filtered.forEach((item) => state.visualGuideExpanded.add(item.id));
+        }
+        renderVisualGuideList();
+      });
+
+      // Delegação de cliques dentro da aba Guia Visual
+      panel.addEventListener('click', (e) => {
+        const chipBtn = e.target.closest('.btn-vg-category');
+        if (chipBtn) {
+          state.visualGuideCategory = chipBtn.dataset.vgCategory;
+          renderVisualGuideCategoryChips();
+
+          if (state.visualGuideQuery.trim()) {
+            const matches = getFilteredVisualGuideItems();
+            state.visualGuideExpanded = new Set(matches.map((item) => item.id));
+          }
+          renderVisualGuideList();
+          return;
+        }
+
+        const toggleBtn = e.target.closest('.btn-vg-toggle');
+        if (toggleBtn) {
+          const id = toggleBtn.dataset.vgToggleId;
+          if (state.visualGuideExpanded.has(id)) {
+            state.visualGuideExpanded.delete(id);
+          } else {
+            state.visualGuideExpanded.add(id);
+          }
+          renderVisualGuideList();
+          return;
+        }
+
+        const zoomBtn = e.target.closest('.btn-zoom-print');
+        if (zoomBtn && !zoomBtn.disabled) {
+          openZoomModal(
+            zoomBtn.dataset.zoomSrc,
+            zoomBtn.dataset.zoomCaption,
+            zoomBtn.dataset.zoomFile
+          );
+          return;
+        }
+
+        if (e.target.closest('#btnVisualGuideResetEmpty')) {
+          state.visualGuideCategory = 'Todas';
+          searchInput.value = '';
+          renderVisualGuideCategoryChips();
+          handleVisualGuideSearch('');
+          searchInput.focus();
         }
       });
     }
 
     /* ========================================================================
-       ATALHO GLOBAL ESC (FECHA LIGHTBOX E POPOVERS)
+       13. ATALHO GLOBAL ESC (FECHA LIGHTBOX E POPOVERS)
        ======================================================================== */
     function initGlobalKeyboard() {
       document.addEventListener('keydown', (e) => {
@@ -2037,16 +3043,22 @@
     }
 
     /* ========================================================================
-       INICIALIZAÇÃO GERAL
+       14. INICIALIZAÇÃO GERAL
        ======================================================================== */
     document.addEventListener('DOMContentLoaded', () => {
-      initAccountSection();
-      initTemplatesTab();
-      initManualTab();
-      initSkillsTab();
-      initChecklistTab();
-      initTabs();
-      initGlobalKeyboard();
+      try {
+        initAccountSection();
+        initZoomModal();
+        initTemplatesTab();
+        initManualTab();
+        initSkillsTab();
+        initChecklistTab();
+        initVisualGuideTab();
+        initTabs();
+        initGlobalKeyboard();
+      } catch (err) {
+        console.error('Erro ao inicializar a Central de Infografia Flourish:', err);
+      }
     });
   </script>
 </body>
